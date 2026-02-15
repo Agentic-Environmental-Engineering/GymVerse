@@ -1,0 +1,104 @@
+export HTTPS_PROXY=http://cipzhao:cipzhao@210.75.240.138:16890
+export HTTP_PROXY=http://cipzhao:cipzhao@210.75.240.138:16890
+export WANDB_API_KEY=35290a7554db860cd7edb29372e838cb083664a7
+cd /ssd/jinzhuoran/GymVerse/gem/
+conda activate /home/jinzhuoran/anaconda3/envs/oat
+python examples/train_oat/train_oat_me_evolve.py \
+  --env_id "example:RunicPotionGame|example:RaidPartyPlanner|example:RuneRingPuzzle|example:DungeonScout" \
+  --evolve \
+  --prompt_template qwen3_game \
+  --wrappers concat \
+  --gamma 0.9 \
+  --norm_return \
+  --gpus 4 \
+  --gradient-checkpointing \
+  --num_samples 1 \
+  --num_env 4 \
+  --rollout_batch_size 64 \
+  --rollout_batch_size_per_device 16 \
+  --pi_buffer_maxlen_per_device 16 \
+  --pretrain /ssd/jinzhuoran/gem/Qwen3-4B-Instruct-2507/ \
+  --enable_prefix_caching \
+  --collocate \
+  --vllm_sleep \
+  --vllm_gpu_ratio 0.45 \
+  --rnd-seed \
+  --learning_rate 0.000001 \
+  --lr_scheduler constant \
+  --lr_warmup_ratio 0 \
+  --num_ppo_epochs 2 \
+  --train_batch_size 64 \
+  --train_batch_size_per_device 1 \
+  --beta 0 \
+  --max_model_len 20000 \
+  --generate_max_length 8192 \
+  --temperature 1.0 \
+  --top_p 1 \
+  --eval_envs "example:RuneRingPuzzle" \
+  --eval_steps 5 \
+  --save_steps 10 \
+  --eval_temperature 0.6 \
+  --eval_top_p 0.95 \
+  --eval_generate_max_length 8192 \
+  --max_train 65000 \
+  --max_save_num 30 \
+  --use-wb \
+  --wb-run-name oat-qwen3-4b-instruct-multi:RunicPotionGame-RaidPartyPlanner-RuneRingPuzzle-example:DungeonScout-eval:RuneRingPuzzle-GuildRegionsGame \
+  --wb_project gem-test \
+  --eval_n 4 \
+  --eval_async_env \
+  --eval_batch_size 4 \
+  --eval_wrappers concat \
+  --eval_prompt_templates qwen3_game \
+  --eval_instance_size 4 \
+  --eval_difficulty 2
+
+python examples/train_oat/train_oat_pe_evolve.py \
+  --env_id "example:RunicPotionGame|example:RaidPartyPlanner|example:RuneRingPuzzle|example:DungeonScout|example:AlgorithmInversion|example:AlgorithmOpsPlanner|example:AlgorithmSATDecision|example:AlgorithmWorkbench|example:GraphCycleStreaming|example:CodeBugFix|example:CodeCoveragePlanner|example:CodeReview|example:CardComboGame|example:DetectiveDeductionGame|example:DungeonRaidPlanning|example:LayeredDependency" \
+  --evolve \
+  --prompt_template qwen3_game \
+  --wrappers concat \
+  --gamma 0.9 \
+  --norm_return \
+  --gpus 4 \
+  --gradient-checkpointing \
+  --num_samples 1 \
+  --num_env 4 \
+  --rollout_batch_size 64 \
+  --rollout_batch_size_per_device 16 \
+  --pi_buffer_maxlen_per_device 16 \
+  --pretrain /ssd/jinzhuoran/gem/Qwen3-4B-Instruct-2507/ \
+  --enable_prefix_caching \
+  --collocate \
+  --vllm_sleep \
+  --vllm_gpu_ratio 0.45 \
+  --rnd-seed \
+  --learning_rate 0.000001 \
+  --lr_scheduler constant \
+  --lr_warmup_ratio 0 \
+  --num_ppo_epochs 2 \
+  --train_batch_size 64 \
+  --train_batch_size_per_device 1 \
+  --beta 0 \
+  --max_model_len 20000 \
+  --generate_max_length 8192 \
+  --temperature 1.0 \
+  --top_p 1 \
+  --eval_envs "example:RuneRingPuzzle|example:AlchemyCraft|example:CombatPlannerGame" \
+  --eval_steps 5 \
+  --save_steps 10 \
+  --eval_temperature 0.6 \
+  --eval_top_p 0.95 \
+  --eval_generate_max_length 8192 \
+  --max_train 65000 \
+  --max_save_num 30 \
+  --use-wb \
+  --wb-run-name oat-qwen3-4b-instruct-multi \
+  --wb_project gem-parallel \
+  --eval_n 4 \
+  --eval_async_env \
+  --eval_batch_size 4 \
+  --eval_wrappers concat \
+  --eval_prompt_templates qwen3_game \
+  --eval_instance_size 4 \
+  --eval_difficulty 5

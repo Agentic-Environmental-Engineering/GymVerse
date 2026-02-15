@@ -1,0 +1,887 @@
+[Complexity 1 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 24 | Actual steps: 26
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='supplies')}
+    \boxed{tool:escalate_alert(incident_id=77, level='minor')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='food')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='80')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='150')}
+    \boxed{tool:request_supplies(hospital_id=22, item='food', qty=59)}
+    \boxed{tool:escalate_alert(incident_id=80, level='moderate')}
+    \boxed{tool:escalate_alert(incident_id=13, level='catastrophic')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='61')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='tent')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:request_supplies(hospital_id=55, item='kit', qty=17)}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='140')}
+    \boxed{tool:request_supplies(hospital_id=58, item='battery', qty=50)}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='176')}
+    \boxed{tool:set_perimeter(incident_id=46, radius=424)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='IND')}
+    \boxed{tool:request_supplies(hospital_id=16, item='battery', qty=16)}
+    \boxed{tool:request_supplies(hospital_id=21, item='tent', qty=33)}
+    \boxed{tool:escalate_alert(incident_id=63, level='severe')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='MIA')}
+    \boxed{tool:request_supplies(hospital_id=51, item='tent', qty=38)}
+    \boxed{tool:compute_sum(column='cost')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='catastrophic')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:set_perimeter(incident_id=64, radius=292)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHL')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='190')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='88')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='296')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='spill')}
+    \boxed{tool:set_perimeter(incident_id=28, radius=187)}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='214')}
+    \boxed{tool:escalate_alert(incident_id=101, level='moderate')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='6')}
+    \boxed{tool:dispatch_team(incident_id=42, team_id=6)}
+    \boxed{tool:dispatch_team(incident_id=74, team_id=87)}
+    \boxed{tool:dispatch_team(incident_id=31, team_id=78)}
+    \boxed{tool:escalate_alert(incident_id=85, level='catastrophic')}
+    \boxed{tool:escalate_alert(incident_id=66, level='moderate')}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='197')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='HOU')}
+    \boxed{tool:compute_sum(column='reported')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:set_perimeter(incident_id=15, radius=312)}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:escalate_alert(incident_id=30, level='severe')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='collapse')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='182')}
+    \boxed{tool:escalate_alert(incident_id=64, level='severe')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='272')}
+    \boxed{tool:escalate_alert(incident_id=13, level='minor')}
+    \boxed{tool:escalate_alert(incident_id=51, level='moderate')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='hazmat')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='264')}
+    \boxed{tool:request_supplies(hospital_id=1, item='food', qty=19)}
+    \boxed{tool:set_perimeter(incident_id=83, radius=244)}
+    \boxed{tool:dispatch_team(incident_id=14, team_id=28)}
+    \boxed{tool:set_perimeter(incident_id=32, radius=472)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='kit')}
+    \boxed{tool:dispatch_team(incident_id=8, team_id=53)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='catastrophic')}
+    \boxed{tool:escalate_alert(incident_id=20, level='minor')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='severe')}
+    \boxed{tool:compute_sum(column='beds')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='teams')}
+    \boxed{tool:set_perimeter(incident_id=41, radius=438)}
+    \boxed{tool:set_perimeter(incident_id=48, radius=178)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='medical')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='294')}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='True')}
+    \boxed{tool:filter_rows(column='route', op=gt, value='23')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='HOU')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=96, team_id=67)}
+    \boxed{tool:filter_rows(column='icu', op=lt, value='300')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='BOS')}
+    \boxed{tool:request_supplies(hospital_id=49, item='fuel', qty=8)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='catastrophic')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='logistics')}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='False')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='46')}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='19')}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='False')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='69')}
+    \boxed{tool:dispatch_team(incident_id=105, team_id=16)}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:compute_avg(column='reported')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='hospitals')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:request_supplies(hospital_id=54, item='boat', qty=61)}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='63')}
+    \boxed{tool:set_perimeter(incident_id=59, radius=245)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='logistics')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='collapse')}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='182')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='14')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='CLT')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='23')}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='92')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='261')}
+    \boxed{tool:filter_rows(column='icu', op=lt, value='50')}
+    \boxed{tool:filter_rows(column='icu', op=lt, value='27')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHX')}
+    \boxed{tool:set_perimeter(incident_id=47, radius=72)}
+    \boxed{tool:escalate_alert(incident_id=49, level='moderate')}
+    \boxed{tool:filter_rows(column='route', op=lt, value='4')}
+    \boxed{tool:set_perimeter(incident_id=10, radius=489)}
+    \boxed{tool:request_supplies(hospital_id=63, item='battery', qty=17)}
+    \boxed{tool:compute_sum(column='reported')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 26 | Actual steps: 28
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='supplies')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='55')}
+    \boxed{tool:dispatch_team(incident_id=10, team_id=4)}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='176')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='89')}
+    \boxed{tool:set_perimeter(incident_id=78, radius=398)}
+    \boxed{tool:request_supplies(hospital_id=58, item='fuel', qty=38)}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='163')}
+    \boxed{tool:filter_rows(column='icu', op=lt, value='171')}
+    \boxed{tool:filter_rows(column='route', op=gt, value='277')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='food')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='80')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='150')}
+    \boxed{tool:escalate_alert(incident_id=77, level='minor')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='61')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='tent')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='140')}
+    \boxed{tool:request_supplies(hospital_id=57, item='boat', qty=27)}
+    \boxed{tool:request_supplies(hospital_id=46, item='battery', qty=37)}
+    \boxed{tool:request_supplies(hospital_id=5, item='battery', qty=77)}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='boat')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=13, team_id=101)}
+    \boxed{tool:unique_count(column='kind')}
+    \boxed{answer:0}
+
+[Complexity 2 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='minor')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:set_perimeter(incident_id=64, radius=292)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='catastrophic')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHL')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='190')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='88')}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='208')}
+    \boxed{tool:set_perimeter(incident_id=22, radius=325)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='spill')}
+    \boxed{tool:escalate_alert(incident_id=110, level='severe')}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='214')}
+    \boxed{tool:dispatch_team(incident_id=42, team_id=6)}
+    \boxed{tool:dispatch_team(incident_id=13, team_id=27)}
+    \boxed{tool:dispatch_team(incident_id=15, team_id=38)}
+    \boxed{tool:escalate_alert(incident_id=42, level='catastrophic')}
+    \boxed{tool:escalate_alert(incident_id=66, level='moderate')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='6')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='HOU')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='6')}
+    \boxed{tool:compute_sum(column='reported')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='160')}
+    \boxed{tool:request_supplies(hospital_id=24, item='kit', qty=5)}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='182')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='moderate')}
+    \boxed{tool:set_perimeter(incident_id=79, radius=371)}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='5')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='kit')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='catastrophic')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='moderate')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='269')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='drought')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:escalate_alert(incident_id=113, level='catastrophic')}
+    \boxed{tool:filter_rows(column='casualties', op=gt, value='16')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='collapse')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=11, team_id=79)}
+    \boxed{tool:request_supplies(hospital_id=50, item='battery', qty=25)}
+    \boxed{tool:dispatch_team(incident_id=48, team_id=33)}
+    \boxed{tool:request_supplies(hospital_id=21, item='tent', qty=17)}
+    \boxed{tool:filter_rows(column='city', op=eq, value='hazmat')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='272')}
+    \boxed{tool:request_supplies(hospital_id=56, item='battery', qty=70)}
+    \boxed{tool:unique_count(column='kind')}
+    \boxed{answer:0}
+
+[Complexity 2 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='teams')}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='21')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='294')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='logistics')}
+    \boxed{tool:request_supplies(hospital_id=44, item='food', qty=51)}
+    \boxed{tool:set_perimeter(incident_id=114, radius=341)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='medical')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=16, team_id=22)}
+    \boxed{tool:set_perimeter(incident_id=53, radius=129)}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='19')}
+    \boxed{tool:escalate_alert(incident_id=101, level='minor')}
+    \boxed{tool:dispatch_team(incident_id=56, team_id=84)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='air')}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='True')}
+    \boxed{tool:escalate_alert(incident_id=24, level='severe')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='23')}
+    \boxed{tool:dispatch_team(incident_id=62, team_id=104)}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='213')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='medical')}
+    \boxed{tool:escalate_alert(incident_id=22, level='moderate')}
+    \boxed{tool:request_supplies(hospital_id=38, item='kit', qty=39)}
+    \boxed{tool:request_supplies(hospital_id=69, item='fuel', qty=30)}
+    \boxed{tool:compute_avg(column='cost')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='hospitals')}
+    \boxed{tool:request_supplies(hospital_id=43, item='kit', qty=6)}
+    \boxed{tool:filter_rows(column='route', op=lt, value='4')}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='296')}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='False')}
+    \boxed{tool:escalate_alert(incident_id=47, level='minor')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHX')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='86')}
+    \boxed{tool:request_supplies(hospital_id=8, item='fuel', qty=26)}
+    \boxed{tool:request_supplies(hospital_id=13, item='fuel', qty=19)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='CLT')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='144')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='150')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='14')}
+    \boxed{tool:set_perimeter(incident_id=108, radius=227)}
+    \boxed{tool:request_supplies(hospital_id=32, item='food', qty=9)}
+    \boxed{tool:dispatch_team(incident_id=68, team_id=27)}
+    \boxed{tool:set_perimeter(incident_id=103, radius=378)}
+    \boxed{tool:filter_rows(column='item', op=eq, value='catastrophic')}
+    \boxed{tool:escalate_alert(incident_id=100, level='catastrophic')}
+    \boxed{tool:escalate_alert(incident_id=90, level='minor')}
+    \boxed{tool:dispatch_team(incident_id=27, team_id=74)}
+    \boxed{tool:compute_sum(column='icu')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 28 | Actual steps: 30
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='supplies')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:set_perimeter(incident_id=99, radius=79)}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='MIA')}
+    \boxed{tool:dispatch_team(incident_id=76, team_id=82)}
+    \boxed{tool:request_supplies(hospital_id=6, item='kit', qty=73)}
+    \boxed{tool:request_supplies(hospital_id=78, item='kit', qty=20)}
+    \boxed{tool:dispatch_team(incident_id=101, team_id=87)}
+    \boxed{tool:set_perimeter(incident_id=29, radius=376)}
+    \boxed{tool:escalate_alert(incident_id=9, level='moderate')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='PHX')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='boat')}
+    \boxed{tool:escalate_alert(incident_id=108, level='severe')}
+    \boxed{tool:escalate_alert(incident_id=102, level='moderate')}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='281')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='80')}
+    \boxed{tool:set_perimeter(incident_id=13, radius=450)}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='19')}
+    \boxed{tool:request_supplies(hospital_id=3, item='kit', qty=59)}
+    \boxed{tool:request_supplies(hospital_id=6, item='kit', qty=17)}
+    \boxed{tool:set_perimeter(incident_id=90, radius=250)}
+    \boxed{tool:filter_rows(column='item', op=eq, value='tent')}
+    \boxed{tool:set_perimeter(incident_id=25, radius=110)}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='277')}
+    \boxed{tool:set_perimeter(incident_id=63, radius=350)}
+    \boxed{tool:set_perimeter(incident_id=114, radius=69)}
+    \boxed{tool:unique_count(column='severity')}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:escalate_alert(incident_id=106, level='moderate')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='IND')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='catastrophic')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:escalate_alert(incident_id=3, level='moderate')}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='True')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='minor')}
+    \boxed{tool:dispatch_team(incident_id=71, team_id=99)}
+    \boxed{tool:dispatch_team(incident_id=35, team_id=87)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='minor')}
+    \boxed{tool:dispatch_team(incident_id=21, team_id=58)}
+    \boxed{tool:escalate_alert(incident_id=105, level='moderate')}
+    \boxed{tool:request_supplies(hospital_id=40, item='fuel', qty=14)}
+    \boxed{tool:set_perimeter(incident_id=49, radius=493)}
+    \boxed{tool:set_perimeter(incident_id=40, radius=202)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='spill')}
+    \boxed{tool:dispatch_team(incident_id=54, team_id=45)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='blast')}
+    \boxed{tool:request_supplies(hospital_id=78, item='boat', qty=67)}
+    \boxed{tool:escalate_alert(incident_id=107, level='moderate')}
+    \boxed{tool:dispatch_team(incident_id=101, team_id=19)}
+    \boxed{tool:request_supplies(hospital_id=73, item='battery', qty=26)}
+    \boxed{tool:request_supplies(hospital_id=12, item='kit', qty=37)}
+    \boxed{tool:filter_rows(column='casualties', op=gt, value='33')}
+    \boxed{tool:compute_avg(column='icu')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='160')}
+    \boxed{tool:request_supplies(hospital_id=24, item='kit', qty=5)}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='182')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='moderate')}
+    \boxed{tool:set_perimeter(incident_id=121, radius=365)}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='5')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='kit')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='catastrophic')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='moderate')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='269')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='drought')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:escalate_alert(incident_id=113, level='catastrophic')}
+    \boxed{tool:filter_rows(column='casualties', op=gt, value='16')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='collapse')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=16, team_id=11)}
+    \boxed{tool:request_supplies(hospital_id=50, item='battery', qty=25)}
+    \boxed{tool:dispatch_team(incident_id=48, team_id=33)}
+    \boxed{tool:request_supplies(hospital_id=21, item='tent', qty=17)}
+    \boxed{tool:filter_rows(column='city', op=eq, value='hazmat')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='272')}
+    \boxed{tool:request_supplies(hospital_id=56, item='battery', qty=70)}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='250')}
+    \boxed{tool:set_perimeter(incident_id=101, radius=497)}
+    \boxed{tool:compute_sum(column='beds')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='teams')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='23')}
+    \boxed{tool:set_perimeter(incident_id=68, radius=324)}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='False')}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='11')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='BOS')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='air')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='medical')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='catastrophic')}
+    \boxed{tool:dispatch_team(incident_id=53, team_id=7)}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='46')}
+    \boxed{tool:filter_rows(column='icu', op=gt, value='109')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='HOU')}
+    \boxed{tool:dispatch_team(incident_id=84, team_id=90)}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='21')}
+    \boxed{tool:filter_rows(column='route', op=gt, value='23')}
+    \boxed{tool:filter_rows(column='icu', op=gt, value='194')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='battery')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:request_supplies(hospital_id=49, item='battery', qty=71)}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='15')}
+    \boxed{tool:dispatch_team(incident_id=20, team_id=26)}
+    \boxed{tool:request_supplies(hospital_id=75, item='food', qty=7)}
+    \boxed{tool:escalate_alert(incident_id=79, level='severe')}
+    \boxed{tool:filter_rows(column='route', op=lt, value='84')}
+    \boxed{tool:compute_avg(column='icu')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='hospitals')}
+    \boxed{tool:request_supplies(hospital_id=77, item='tent', qty=47)}
+    \boxed{tool:filter_rows(column='route', op=lt, value='4')}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='296')}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='False')}
+    \boxed{tool:escalate_alert(incident_id=47, level='minor')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHX')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='86')}
+    \boxed{tool:request_supplies(hospital_id=15, item='fuel', qty=12)}
+    \boxed{tool:request_supplies(hospital_id=13, item='fuel', qty=19)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='CLT')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='144')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='150')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='14')}
+    \boxed{tool:set_perimeter(incident_id=108, radius=227)}
+    \boxed{tool:request_supplies(hospital_id=78, item='fuel', qty=74)}
+    \boxed{tool:dispatch_team(incident_id=33, team_id=33)}
+    \boxed{tool:set_perimeter(incident_id=103, radius=378)}
+    \boxed{tool:filter_rows(column='item', op=eq, value='catastrophic')}
+    \boxed{tool:escalate_alert(incident_id=5, level='minor')}
+    \boxed{tool:escalate_alert(incident_id=90, level='minor')}
+    \boxed{tool:dispatch_team(incident_id=12, team_id=56)}
+    \boxed{tool:filter_rows(column='casualties', op=gt, value='212')}
+    \boxed{tool:dispatch_team(incident_id=22, team_id=48)}
+    \boxed{tool:compute_avg(column='reported')}
+    \boxed{answer:0.0}
+
+[Complexity 4 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 30 | Actual steps: 32
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='supplies')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='tent')}
+    \boxed{tool:escalate_alert(incident_id=30, level='minor')}
+    \boxed{tool:dispatch_team(incident_id=102, team_id=81)}
+    \boxed{tool:dispatch_team(incident_id=103, team_id=87)}
+    \boxed{tool:dispatch_team(incident_id=21, team_id=43)}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='61')}
+    \boxed{tool:escalate_alert(incident_id=21, level='minor')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='PHX')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:set_perimeter(incident_id=30, radius=411)}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='80')}
+    \boxed{tool:dispatch_team(incident_id=86, team_id=109)}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='99')}
+    \boxed{tool:request_supplies(hospital_id=3, item='boat', qty=39)}
+    \boxed{tool:filter_rows(column='item', op=eq, value='food')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='267')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='33')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='279')}
+    \boxed{tool:escalate_alert(incident_id=54, level='minor')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='89')}
+    \boxed{tool:dispatch_team(incident_id=67, team_id=9)}
+    \boxed{tool:filter_rows(column='route', op=gt, value='17')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='55')}
+    \boxed{tool:set_perimeter(incident_id=125, radius=350)}
+    \boxed{tool:filter_rows(column='item', op=eq, value='battery')}
+    \boxed{tool:escalate_alert(incident_id=12, level='severe')}
+    \boxed{tool:escalate_alert(incident_id=71, level='moderate')}
+    \boxed{tool:unique_count(column='severity')}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:set_perimeter(incident_id=102, radius=124)}
+    \boxed{tool:request_supplies(hospital_id=40, item='fuel', qty=14)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='riot')}
+    \boxed{tool:dispatch_team(incident_id=66, team_id=5)}
+    \boxed{tool:filter_rows(column='city', op=eq, value='spill')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='IND')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:escalate_alert(incident_id=43, level='moderate')}
+    \boxed{tool:request_supplies(hospital_id=10, item='battery', qty=23)}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:request_supplies(hospital_id=31, item='kit', qty=67)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='catastrophic')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='blast')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHL')}
+    \boxed{tool:dispatch_team(incident_id=27, team_id=42)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='minor')}
+    \boxed{tool:set_perimeter(incident_id=24, radius=458)}
+    \boxed{tool:set_perimeter(incident_id=81, radius=101)}
+    \boxed{tool:dispatch_team(incident_id=65, team_id=116)}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='84')}
+    \boxed{tool:request_supplies(hospital_id=8, item='battery', qty=51)}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='296')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='fuel')}
+    \boxed{tool:set_perimeter(incident_id=49, radius=172)}
+    \boxed{tool:filter_rows(column='casualties', op=gt, value='236')}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='241')}
+    \boxed{tool:set_perimeter(incident_id=53, radius=343)}
+    \boxed{tool:compute_avg(column='icu')}
+    \boxed{answer:0.0}
+
+[Complexity 4 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:set_perimeter(incident_id=23, radius=173)}
+    \boxed{tool:dispatch_team(incident_id=88, team_id=34)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='moderate')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='37')}
+    \boxed{tool:request_supplies(hospital_id=38, item='food', qty=63)}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='143')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='drought')}
+    \boxed{tool:filter_rows(column='beds', op=lt, value='264')}
+    \boxed{tool:escalate_alert(incident_id=124, level='catastrophic')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='HOU')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='riot')}
+    \boxed{tool:dispatch_team(incident_id=27, team_id=13)}
+    \boxed{tool:escalate_alert(incident_id=67, level='catastrophic')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='159')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='moderate')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='IND')}
+    \boxed{tool:request_supplies(hospital_id=45, item='battery', qty=20)}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=6, team_id=75)}
+    \boxed{tool:request_supplies(hospital_id=33, item='boat', qty=59)}
+    \boxed{tool:request_supplies(hospital_id=14, item='food', qty=30)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='catastrophic')}
+    \boxed{tool:request_supplies(hospital_id=30, item='boat', qty=61)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='CLT')}
+    \boxed{tool:dispatch_team(incident_id=32, team_id=11)}
+    \boxed{tool:request_supplies(hospital_id=15, item='fuel', qty=8)}
+    \boxed{tool:unique_count(column='severity')}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='teams')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=6, team_id=68)}
+    \boxed{tool:dispatch_team(incident_id=13, team_id=2)}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='23')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='air')}
+    \boxed{tool:escalate_alert(incident_id=111, level='moderate')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='278')}
+    \boxed{tool:set_perimeter(incident_id=33, radius=179)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='medical')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='69')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='HOU')}
+    \boxed{tool:set_perimeter(incident_id=124, radius=66)}
+    \boxed{tool:filter_rows(column='icu', op=gt, value='109')}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='13')}
+    \boxed{tool:dispatch_team(incident_id=80, team_id=1)}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='True')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='29')}
+    \boxed{tool:dispatch_team(incident_id=57, team_id=5)}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:request_supplies(hospital_id=3, item='battery', qty=80)}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='216')}
+    \boxed{tool:filter_rows(column='route', op=lt, value='84')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='213')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='46')}
+    \boxed{tool:request_supplies(hospital_id=41, item='food', qty=38)}
+    \boxed{tool:escalate_alert(incident_id=22, level='severe')}
+    \boxed{tool:escalate_alert(incident_id=68, level='moderate')}
+    \boxed{tool:compute_sum(column='icu')}
+    \boxed{answer:0.0}
+
+[Complexity 4 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='hospitals')}
+    \boxed{tool:dispatch_team(incident_id=42, team_id=23)}
+    \boxed{tool:escalate_alert(incident_id=117, level='catastrophic')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='142')}
+    \boxed{tool:escalate_alert(incident_id=12, level='catastrophic')}
+    \boxed{tool:request_supplies(hospital_id=27, item='fuel', qty=12)}
+    \boxed{tool:request_supplies(hospital_id=84, item='tent', qty=66)}
+    \boxed{tool:set_perimeter(incident_id=43, radius=240)}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='266')}
+    \boxed{tool:escalate_alert(incident_id=57, level='minor')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='CLT')}
+    \boxed{tool:request_supplies(hospital_id=64, item='food', qty=38)}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='14')}
+    \boxed{tool:dispatch_team(incident_id=110, team_id=107)}
+    \boxed{tool:set_perimeter(incident_id=112, radius=262)}
+    \boxed{tool:filter_rows(column='city', op=eq, value='collapse')}
+    \boxed{tool:set_perimeter(incident_id=79, radius=494)}
+    \boxed{tool:request_supplies(hospital_id=84, item='boat', qty=10)}
+    \boxed{tool:set_perimeter(incident_id=69, radius=391)}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='120')}
+    \boxed{tool:dispatch_team(incident_id=125, team_id=110)}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHL')}
+    \boxed{tool:request_supplies(hospital_id=25, item='fuel', qty=9)}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='296')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='217')}
+    \boxed{tool:filter_rows(column='route', op=lt, value='4')}
+    \boxed{tool:compute_avg(column='headcount')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 32 | Actual steps: 34
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='supplies')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='140')}
+    \boxed{tool:filter_rows(column='casualties', op=gt, value='123')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='icu', op=lt, value='244')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=58, team_id=82)}
+    \boxed{tool:set_perimeter(incident_id=45, radius=56)}
+    \boxed{tool:request_supplies(hospital_id=82, item='battery', qty=52)}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='267')}
+    \boxed{tool:set_perimeter(incident_id=38, radius=487)}
+    \boxed{tool:escalate_alert(incident_id=115, level='catastrophic')}
+    \boxed{tool:request_supplies(hospital_id=55, item='fuel', qty=17)}
+    \boxed{tool:filter_rows(column='item', op=eq, value='fuel')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='89')}
+    \boxed{tool:escalate_alert(incident_id=66, level='moderate')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='food')}
+    \boxed{tool:set_perimeter(incident_id=9, radius=255)}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='80')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='icu', op=gt, value='149')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='33')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='74')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='99')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='PHX')}
+    \boxed{tool:request_supplies(hospital_id=76, item='boat', qty=21)}
+    \boxed{tool:dispatch_team(incident_id=71, team_id=58)}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='281')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='150')}
+    \boxed{tool:request_supplies(hospital_id=87, item='tent', qty=12)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='boat')}
+    \boxed{tool:compute_avg(column='icu')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:set_perimeter(incident_id=116, radius=164)}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:escalate_alert(incident_id=130, level='catastrophic')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='route', op=gt, value='96')}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='177')}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='207')}
+    \boxed{tool:escalate_alert(incident_id=8, level='catastrophic')}
+    \boxed{tool:set_perimeter(incident_id=70, radius=381)}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='True')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='BOS')}
+    \boxed{tool:dispatch_team(incident_id=135, team_id=84)}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='257')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='IND')}
+    \boxed{tool:filter_rows(column='reported', op=gt, value='197')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='riot')}
+    \boxed{tool:request_supplies(hospital_id=35, item='food', qty=69)}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='241')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='catastrophic')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='blast')}
+    \boxed{tool:request_supplies(hospital_id=70, item='tent', qty=71)}
+    \boxed{tool:set_perimeter(incident_id=54, radius=360)}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHL')}
+    \boxed{tool:request_supplies(hospital_id=87, item='kit', qty=46)}
+    \boxed{tool:dispatch_team(incident_id=47, team_id=111)}
+    \boxed{tool:escalate_alert(incident_id=89, level='catastrophic')}
+    \boxed{tool:filter_rows(column='casualties', op=gt, value='103')}
+    \boxed{tool:compute_sum(column='stock')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='incidents')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:set_perimeter(incident_id=132, radius=420)}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:escalate_alert(incident_id=59, level='severe')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='severe')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='kit')}
+    \boxed{tool:escalate_alert(incident_id=124, level='catastrophic')}
+    \boxed{tool:filter_rows(column='item', op=eq, value='DET')}
+    \boxed{tool:escalate_alert(incident_id=27, level='severe')}
+    \boxed{tool:escalate_alert(incident_id=12, level='catastrophic')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='CLT')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='233')}
+    \boxed{tool:request_supplies(hospital_id=20, item='fuel', qty=5)}
+    \boxed{tool:set_perimeter(incident_id=55, radius=400)}
+    \boxed{tool:dispatch_team(incident_id=7, team_id=67)}
+    \boxed{tool:set_perimeter(incident_id=63, radius=472)}
+    \boxed{tool:filter_rows(column='item', op=eq, value='catastrophic')}
+    \boxed{tool:dispatch_team(incident_id=106, team_id=82)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='riot')}
+    \boxed{tool:escalate_alert(incident_id=10, level='catastrophic')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='250')}
+    \boxed{tool:set_perimeter(incident_id=12, radius=185)}
+    \boxed{tool:request_supplies(hospital_id=53, item='tent', qty=19)}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='291')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='minor')}
+    \boxed{tool:escalate_alert(incident_id=47, level='minor')}
+    \boxed{tool:request_supplies(hospital_id=5, item='fuel', qty=51)}
+    \boxed{tool:escalate_alert(incident_id=112, level='catastrophic')}
+    \boxed{tool:set_perimeter(incident_id=36, radius=393)}
+    \boxed{tool:compute_avg(column='icu')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='teams')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:dispatch_team(incident_id=6, team_id=68)}
+    \boxed{tool:dispatch_team(incident_id=13, team_id=2)}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='23')}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='air')}
+    \boxed{tool:escalate_alert(incident_id=111, level='moderate')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='278')}
+    \boxed{tool:set_perimeter(incident_id=88, radius=114)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='medical')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='69')}
+    \boxed{tool:filter_rows(column='city', op=eq, value='HOU')}
+    \boxed{tool:set_perimeter(incident_id=124, radius=66)}
+    \boxed{tool:filter_rows(column='icu', op=gt, value='109')}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='13')}
+    \boxed{tool:dispatch_team(incident_id=80, team_id=1)}
+    \boxed{tool:filter_rows(column='ready', op=eq, value='True')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='29')}
+    \boxed{tool:dispatch_team(incident_id=57, team_id=5)}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:request_supplies(hospital_id=3, item='battery', qty=80)}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='216')}
+    \boxed{tool:filter_rows(column='route', op=lt, value='84')}
+    \boxed{tool:filter_rows(column='reported', op=lt, value='213')}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='46')}
+    \boxed{tool:request_supplies(hospital_id=41, item='food', qty=38)}
+    \boxed{tool:escalate_alert(incident_id=22, level='severe')}
+    \boxed{tool:escalate_alert(incident_id=68, level='moderate')}
+    \boxed{tool:set_perimeter(incident_id=51, radius=270)}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='133')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 5 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='hospitals')}
+    \boxed{tool:dispatch_team(incident_id=31, team_id=103)}
+    \boxed{tool:escalate_alert(incident_id=117, level='catastrophic')}
+    \boxed{tool:join_table(name='supplies', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='52')}
+    \boxed{tool:escalate_alert(incident_id=12, level='catastrophic')}
+    \boxed{tool:request_supplies(hospital_id=27, item='fuel', qty=12)}
+    \boxed{tool:request_supplies(hospital_id=53, item='boat', qty=30)}
+    \boxed{tool:set_perimeter(incident_id=123, radius=266)}
+    \boxed{tool:join_table(name='hospitals', left_on='hospital_id', right_on='hospital_id', how='inner')}
+    \boxed{tool:join_table(name='teams', left_on='team_id', right_on='team_id', how='inner')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='144')}
+    \boxed{tool:escalate_alert(incident_id=57, level='minor')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='142')}
+    \boxed{tool:request_supplies(hospital_id=21, item='tent', qty=24)}
+    \boxed{tool:filter_rows(column='headcount', op=lt, value='266')}
+    \boxed{tool:dispatch_team(incident_id=110, team_id=107)}
+    \boxed{tool:set_perimeter(incident_id=132, radius=272)}
+    \boxed{tool:filter_rows(column='kind', op=eq, value='CLT')}
+    \boxed{tool:set_perimeter(incident_id=120, radius=450)}
+    \boxed{tool:request_supplies(hospital_id=84, item='boat', qty=10)}
+    \boxed{tool:set_perimeter(incident_id=69, radius=391)}
+    \boxed{tool:filter_rows(column='headcount', op=gt, value='120')}
+    \boxed{tool:dispatch_team(incident_id=125, team_id=110)}
+    \boxed{tool:filter_rows(column='city', op=eq, value='PHL')}
+    \boxed{tool:request_supplies(hospital_id=25, item='fuel', qty=9)}
+    \boxed{tool:filter_rows(column='beds', op=gt, value='296')}
+    \boxed{tool:filter_rows(column='casualties', op=lt, value='217')}
+    \boxed{tool:filter_rows(column='route', op=lt, value='4')}
+    \boxed{tool:filter_rows(column='icu', op=gt, value='16')}
+    \boxed{tool:request_supplies(hospital_id=26, item='tent', qty=47)}
+    \boxed{tool:compute_sum(column='cost')}
+    \boxed{answer:0.0}
+
+
+===== Summary =====
+Total cases: 25
+Successes: 25
+Failures: 0
+Elapsed: 0.06s
+Success rate: 100.0%

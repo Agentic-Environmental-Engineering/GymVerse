@@ -1,0 +1,537 @@
+[Complexity 1 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 24 | Actual steps: 26
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='schedules')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='54')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='78')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sat')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='32')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='day1')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sun')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='econ')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='61')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='morning')}
+    \boxed{tool:unique_count(column='subject')}
+    \boxed{answer:0}
+
+[Complexity 1 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='4')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='12')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='phil')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='71')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='closed')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='76')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='grace')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='54')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 1 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='88')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='astro')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='2')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='heidi')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='85')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='79')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='39')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='45')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='3')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='40')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='overfull')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='63')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:compute_sum(column='credits')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 26 | Actual steps: 28
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='schedules')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='54')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='78')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sat')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='32')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='day1')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sun')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='econ')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='61')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx1')}
+    \boxed{tool:unique_count(column='subject')}
+    \boxed{answer:0}
+
+[Complexity 2 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='4')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='12')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='phil')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='71')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='closed')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='76')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='grace')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='54')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='x303')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='day3')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 2 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='88')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='astro')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='2')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='heidi')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='85')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='79')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='39')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='45')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='3')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='40')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='overfull')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='63')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='58')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='overfull')}
+    \boxed{tool:compute_sum(column='credits')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 28 | Actual steps: 30
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='schedules')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='54')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='78')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sat')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='32')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='day1')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sun')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='econ')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='61')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx1')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='12')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='grace')}
+    \boxed{tool:unique_count(column='subject')}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='4')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='12')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='phil')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='71')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='closed')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='76')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='grace')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='54')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='x303')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='day3')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='88')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='astro')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='2')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='heidi')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='85')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='79')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='39')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='45')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='3')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='40')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='overfull')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='63')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='58')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='overfull')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='92')}
+    \boxed{tool:compute_sum(column='credits')}
+    \boxed{answer:0.0}
+
+[Complexity 4 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 30 | Actual steps: 32
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='schedules')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='54')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='78')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sat')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='32')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='day1')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sun')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='econ')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='61')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx1')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='12')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='grace')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='57')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='morning')}
+    \boxed{tool:unique_count(column='subject')}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='4')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='12')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='phil')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='71')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='closed')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='76')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='grace')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='54')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='x303')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='day3')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='ling')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='astro')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='88')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='astro')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='2')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='heidi')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='85')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='79')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='39')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='45')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='3')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='40')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='overfull')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='63')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='58')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='overfull')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='92')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='18')}
+    \boxed{tool:compute_sum(column='credits')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 32 | Actual steps: 34
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='schedules')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='54')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='78')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sat')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='32')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='day1')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='sun')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='sat')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='econ')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='61')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx1')}
+    \boxed{tool:filter_rows(column='capacity', op=gt, value='12')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='grace')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='57')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='morning')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='x303')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='labx1')}
+    \boxed{tool:unique_count(column='subject')}
+    \boxed{answer:0}
+
+[Complexity 5 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='4')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='12')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='day', op=eq, value='labx2')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='phil')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='71')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='closed')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='76')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='grace')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='54')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='evening')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='1')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='x303')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='day3')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='major', op=eq, value='ling')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='astro')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 5 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='courses')}
+    \boxed{tool:join_table(name='students', left_on='student_id', right_on='student_id', how='inner')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='88')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='astro')}
+    \boxed{tool:join_table(name='enrollments', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='law')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='2')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='heidi')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='85')}
+    \boxed{tool:join_table(name='schedules', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:join_table(name='courses', left_on='course_id', right_on='course_id', how='inner')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='79')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='39')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='course_id', op=lt, value='45')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='3')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='40')}
+    \boxed{tool:filter_rows(column='slot', op=eq, value='overfull')}
+    \boxed{tool:filter_rows(column='subject', op=eq, value='phil')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='63')}
+    \boxed{tool:filter_rows(column='instructor', op=eq, value='ivan')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='basic')}
+    \boxed{tool:filter_rows(column='year', op=lt, value='58')}
+    \boxed{tool:filter_rows(column='room', op=eq, value='overfull')}
+    \boxed{tool:filter_rows(column='level', op=eq, value='core')}
+    \boxed{tool:filter_rows(column='credits', op=lt, value='92')}
+    \boxed{tool:filter_rows(column='credits', op=gt, value='1')}
+    \boxed{tool:filter_rows(column='year', op=gt, value='18')}
+    \boxed{tool:filter_rows(column='capacity', op=lt, value='76')}
+    \boxed{tool:filter_rows(column='student_id', op=lt, value='66')}
+    \boxed{tool:compute_sum(column='credits')}
+    \boxed{answer:0.0}
+
+
+===== Summary =====
+Total cases: 15
+Successes: 15
+Failures: 0
+Elapsed: 0.04s
+Success rate: 100.0%

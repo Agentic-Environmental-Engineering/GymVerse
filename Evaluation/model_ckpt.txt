@@ -1,0 +1,4 @@
+# Model checkpoints to evaluate
+# One model path per line
+
+# Add your model paths below:

@@ -1,0 +1,887 @@
+[Complexity 1 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 24 | Actual steps: 26
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='staff')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='repair')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='surgeon')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='triage')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:assign_bed(patient_id=92, bed_id=16)}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='er')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='clerk')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='paramedic')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='critical')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='surgeon')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='minor')}
+    \boxed{tool:schedule_proc(patient_id=106, proc_id=54)}
+    \boxed{tool:assign_bed(patient_id=79, bed_id=15)}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='er')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='clerk')}
+    \boxed{tool:order_lab(patient_id=94, test='hep')}
+    \boxed{tool:order_lab(patient_id=109, test='lipid')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='minor')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 1 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:order_lab(patient_id=112, test='uric')}
+    \boxed{tool:assign_bed(patient_id=4, bed_id=30)}
+    \boxed{tool:filter_rows(column='test', op=eq, value='hep')}
+    \boxed{tool:schedule_proc(patient_id=66, proc_id=45)}
+    \boxed{tool:order_lab(patient_id=40, test='us')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='queued')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='uric')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='final')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='wardb')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='7.5')}
+    \boxed{tool:assign_bed(patient_id=113, bed_id=48)}
+    \boxed{tool:order_lab(patient_id=59, test='us')}
+    \boxed{tool:order_lab(patient_id=85, test='us')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='lipid')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:schedule_proc(patient_id=82, proc_id=23)}
+    \boxed{tool:schedule_proc(patient_id=99, proc_id=26)}
+    \boxed{tool:compute_avg(column='age')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='patients')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='uric')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='49')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='69')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='203')}
+    \boxed{tool:schedule_proc(patient_id=13, proc_id=59)}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='warde')}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='wardd')}
+    \boxed{tool:assign_bed(patient_id=105, bed_id=25)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='stable')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='170')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='80')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='X')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='241')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='echo')}
+    \boxed{tool:assign_bed(patient_id=108, bed_id=14)}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='released')}
+    \boxed{tool:assign_bed(patient_id=78, bed_id=54)}
+    \boxed{tool:assign_bed(patient_id=1, bed_id=45)}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 1 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='10.55')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='stable')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='8.39')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='us')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='211')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='5.37')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='released')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='echo')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:assign_bed(patient_id=69, bed_id=5)}
+    \boxed{tool:order_lab(patient_id=49, test='echo')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='clerk')}
+    \boxed{tool:assign_bed(patient_id=44, bed_id=2)}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='hep')}
+    \boxed{tool:schedule_proc(patient_id=73, proc_id=17)}
+    \boxed{tool:order_lab(patient_id=16, test='hep')}
+    \boxed{tool:order_lab(patient_id=39, test='echo')}
+    \boxed{tool:assign_bed(patient_id=112, bed_id=16)}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 1 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='procedures')}
+    \boxed{tool:assign_bed(patient_id=5, bed_id=5)}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='scan')}
+    \boxed{tool:assign_bed(patient_id=36, bed_id=24)}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='in')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='162')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='path')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='122')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='45')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='paramedic')}
+    \boxed{tool:schedule_proc(patient_id=6, proc_id=46)}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='minor')}
+    \boxed{tool:schedule_proc(patient_id=16, proc_id=43)}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='extreme')}
+    \boxed{tool:schedule_proc(patient_id=73, proc_id=15)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='True')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:assign_bed(patient_id=42, bed_id=5)}
+    \boxed{tool:schedule_proc(patient_id=3, proc_id=42)}
+    \boxed{tool:compute_avg(column='value')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 26 | Actual steps: 28
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='staff')}
+    \boxed{tool:assign_bed(patient_id=5, bed_id=79)}
+    \boxed{tool:filter_rows(column='role', op=eq, value='paramedic')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='surgeon')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='repair')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='clerk')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='repair')}
+    \boxed{tool:order_lab(patient_id=94, test='uric')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='warda')}
+    \boxed{tool:order_lab(patient_id=105, test='us')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='in')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='clerk')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='minor')}
+    \boxed{tool:assign_bed(patient_id=103, bed_id=78)}
+    \boxed{tool:order_lab(patient_id=11, test='uric')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='triage')}
+    \boxed{tool:order_lab(patient_id=4, test='hep')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='running')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 2 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='clerk')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='31')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='ent')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='89')}
+    \boxed{tool:order_lab(patient_id=61, test='hep')}
+    \boxed{tool:schedule_proc(patient_id=22, proc_id=65)}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='wardb')}
+    \boxed{tool:order_lab(patient_id=22, test='uric')}
+    \boxed{tool:assign_bed(patient_id=85, bed_id=66)}
+    \boxed{tool:schedule_proc(patient_id=109, proc_id=74)}
+    \boxed{tool:schedule_proc(patient_id=14, proc_id=21)}
+    \boxed{tool:filter_rows(column='value', op=lt, value='244')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='uric')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='hep')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='uric')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='queued')}
+    \boxed{tool:assign_bed(patient_id=22, bed_id=21)}
+    \boxed{tool:compute_avg(column='age')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='patients')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='derm')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='out')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='69')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='49')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:schedule_proc(patient_id=17, proc_id=21)}
+    \boxed{tool:filter_rows(column='role', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='203')}
+    \boxed{tool:assign_bed(patient_id=117, bed_id=25)}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='warde')}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='wardd')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='stable')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='170')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='X')}
+    \boxed{tool:assign_bed(patient_id=12, bed_id=85)}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='queued')}
+    \boxed{tool:assign_bed(patient_id=112, bed_id=44)}
+    \boxed{tool:assign_bed(patient_id=1, bed_id=45)}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='released')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 2 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='queued')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='wardb')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='3.11')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:assign_bed(patient_id=82, bed_id=92)}
+    \boxed{tool:order_lab(patient_id=48, test='uric')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='78')}
+    \boxed{tool:assign_bed(patient_id=23, bed_id=47)}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='derm')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='10.55')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='8.39')}
+    \boxed{tool:order_lab(patient_id=1, test='hep')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='us')}
+    \boxed{tool:order_lab(patient_id=50, test='us')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='211')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='5.37')}
+    \boxed{tool:schedule_proc(patient_id=34, proc_id=20)}
+    \boxed{tool:schedule_proc(patient_id=3, proc_id=49)}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='released')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='final')}
+    \boxed{tool:compute_sum(column='duration')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='procedures')}
+    \boxed{tool:order_lab(patient_id=27, test='lipid')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='pharm')}
+    \boxed{tool:assign_bed(patient_id=38, bed_id=18)}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='extreme')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='scan')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='renal')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='scan')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='clerk')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='extreme')}
+    \boxed{tool:schedule_proc(patient_id=4, proc_id=6)}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='extreme')}
+    \boxed{tool:assign_bed(patient_id=5, bed_id=29)}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='triage')}
+    \boxed{tool:assign_bed(patient_id=36, bed_id=24)}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='162')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='path')}
+    \boxed{tool:assign_bed(patient_id=33, bed_id=33)}
+    \boxed{tool:schedule_proc(patient_id=16, proc_id=43)}
+    \boxed{tool:filter_rows(column='age', op=gt, value='122')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='major')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 28 | Actual steps: 30
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='staff')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='pharm')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:schedule_proc(patient_id=92, proc_id=11)}
+    \boxed{tool:order_lab(patient_id=129, test='echo')}
+    \boxed{tool:schedule_proc(patient_id=101, proc_id=68)}
+    \boxed{tool:filter_rows(column='role', op=eq, value='in')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='paramedic')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='surgeon')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='206')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='in')}
+    \boxed{tool:schedule_proc(patient_id=32, proc_id=82)}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='in')}
+    \boxed{tool:assign_bed(patient_id=6, bed_id=25)}
+    \boxed{tool:schedule_proc(patient_id=24, proc_id=48)}
+    \boxed{tool:order_lab(patient_id=123, test='lipid')}
+    \boxed{tool:order_lab(patient_id=109, test='us')}
+    \boxed{tool:assign_bed(patient_id=92, bed_id=94)}
+    \boxed{tool:assign_bed(patient_id=74, bed_id=57)}
+    \boxed{tool:order_lab(patient_id=99, test='uric')}
+    \boxed{tool:assign_bed(patient_id=65, bed_id=16)}
+    \boxed{tool:filter_rows(column='role', op=eq, value='pharm')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='final')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='echo')}
+    \boxed{tool:schedule_proc(patient_id=4, proc_id=26)}
+    \boxed{tool:assign_bed(patient_id=89, bed_id=74)}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='ent')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:assign_bed(patient_id=57, bed_id=81)}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='191')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:order_lab(patient_id=52, test='us')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='107')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='onc')}
+    \boxed{tool:assign_bed(patient_id=10, bed_id=93)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='244')}
+    \boxed{tool:assign_bed(patient_id=43, bed_id=21)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='10.83')}
+    \boxed{tool:order_lab(patient_id=102, test='lipid')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='hep')}
+    \boxed{tool:order_lab(patient_id=44, test='lipid')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='1.25')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='queued')}
+    \boxed{tool:unique_count(column='test')}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='patients')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='69')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='30')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='triage')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='er')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='derm')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='241')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='X')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='lipid')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='132')}
+    \boxed{tool:order_lab(patient_id=105, test='lipid')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='80')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='uric')}
+    \boxed{tool:schedule_proc(patient_id=88, proc_id=34)}
+    \boxed{tool:assign_bed(patient_id=108, bed_id=84)}
+    \boxed{tool:schedule_proc(patient_id=3, proc_id=25)}
+    \boxed{tool:assign_bed(patient_id=80, bed_id=94)}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='90')}
+    \boxed{tool:assign_bed(patient_id=66, bed_id=17)}
+    \boxed{tool:unique_count(column='test')}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='lipid')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='211')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='wardb')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='5.37')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:assign_bed(patient_id=116, bed_id=35)}
+    \boxed{tool:order_lab(patient_id=87, test='lipid')}
+    \boxed{tool:order_lab(patient_id=9, test='us')}
+    \boxed{tool:assign_bed(patient_id=78, bed_id=71)}
+    \boxed{tool:filter_rows(column='value', op=gt, value='8.39')}
+    \boxed{tool:assign_bed(patient_id=6, bed_id=76)}
+    \boxed{tool:assign_bed(patient_id=23, bed_id=45)}
+    \boxed{tool:assign_bed(patient_id=69, bed_id=37)}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='hep')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='7.66')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:assign_bed(patient_id=81, bed_id=3)}
+    \boxed{tool:filter_rows(column='value', op=gt, value='3.11')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='stable')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='Y')}
+    \boxed{tool:order_lab(patient_id=34, test='uric')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='10.55')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='procedures')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='path')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='109')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='scan')}
+    \boxed{tool:order_lab(patient_id=126, test='hep')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='162')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='triage')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='55')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='18')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='scan')}
+    \boxed{tool:schedule_proc(patient_id=14, proc_id=41)}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='extreme')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='106')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='True')}
+    \boxed{tool:order_lab(patient_id=75, test='echo')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='clerk')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='60')}
+    \boxed{tool:order_lab(patient_id=83, test='us')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='drain')}
+    \boxed{tool:order_lab(patient_id=93, test='uric')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='us')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 30 | Actual steps: 32
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='staff')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='clerk')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='repair')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='16')}
+    \boxed{tool:schedule_proc(patient_id=121, proc_id=73)}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:assign_bed(patient_id=90, bed_id=56)}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='pharm')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='in')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='paramedic')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='out')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='surgeon')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='in')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='er')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='critical')}
+    \boxed{tool:assign_bed(patient_id=11, bed_id=77)}
+    \boxed{tool:filter_rows(column='role', op=eq, value='pharm')}
+    \boxed{tool:order_lab(patient_id=99, test='uric')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='in')}
+    \boxed{tool:schedule_proc(patient_id=101, proc_id=68)}
+    \boxed{tool:schedule_proc(patient_id=19, proc_id=4)}
+    \boxed{tool:schedule_proc(patient_id=48, proc_id=25)}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='clerk')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='transplant')}
+    \boxed{tool:assign_bed(patient_id=76, bed_id=59)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='drain')}
+    \boxed{tool:assign_bed(patient_id=92, bed_id=54)}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='lipid')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:assign_bed(patient_id=133, bed_id=100)}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='repair')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='wardb')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='ent')}
+    \boxed{tool:order_lab(patient_id=19, test='hep')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='10.83')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='final')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='191')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:schedule_proc(patient_id=66, proc_id=5)}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='paramedic')}
+    \boxed{tool:schedule_proc(patient_id=113, proc_id=85)}
+    \boxed{tool:order_lab(patient_id=15, test='echo')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='6.45')}
+    \boxed{tool:assign_bed(patient_id=43, bed_id=21)}
+    \boxed{tool:schedule_proc(patient_id=89, proc_id=1)}
+    \boxed{tool:assign_bed(patient_id=57, bed_id=81)}
+    \boxed{tool:assign_bed(patient_id=10, bed_id=93)}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='patients')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='132')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='204')}
+    \boxed{tool:schedule_proc(patient_id=6, proc_id=48)}
+    \boxed{tool:filter_rows(column='age', op=lt, value='74')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:assign_bed(patient_id=109, bed_id=92)}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='stable')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='30')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='241')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='critical')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='69')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='triage')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='queued')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='derm')}
+    \boxed{tool:order_lab(patient_id=19, test='uric')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='80')}
+    \boxed{tool:schedule_proc(patient_id=25, proc_id=59)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='released')}
+    \boxed{tool:unique_count(column='specialty')}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='lipid')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='211')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='wardb')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='5.37')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:assign_bed(patient_id=116, bed_id=35)}
+    \boxed{tool:order_lab(patient_id=87, test='lipid')}
+    \boxed{tool:order_lab(patient_id=9, test='us')}
+    \boxed{tool:assign_bed(patient_id=112, bed_id=34)}
+    \boxed{tool:filter_rows(column='value', op=gt, value='8.39')}
+    \boxed{tool:assign_bed(patient_id=72, bed_id=95)}
+    \boxed{tool:assign_bed(patient_id=23, bed_id=45)}
+    \boxed{tool:assign_bed(patient_id=69, bed_id=37)}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='hep')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='7.66')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:assign_bed(patient_id=107, bed_id=75)}
+    \boxed{tool:filter_rows(column='value', op=gt, value='3.11')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='stable')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='Y')}
+    \boxed{tool:order_lab(patient_id=34, test='uric')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='10.55')}
+    \boxed{tool:schedule_proc(patient_id=107, proc_id=16)}
+    \boxed{tool:filter_rows(column='test', op=eq, value='surgeon')}
+    \boxed{tool:unique_count(column='specialty')}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='procedures')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='major')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:schedule_proc(patient_id=92, proc_id=56)}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='109')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='True')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='triage')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='path')}
+    \boxed{tool:order_lab(patient_id=59, test='uric')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='18')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='scan')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='162')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='hep')}
+    \boxed{tool:order_lab(patient_id=83, test='us')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='55')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='122')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='us')}
+    \boxed{tool:order_lab(patient_id=10, test='uric')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='clerk')}
+    \boxed{tool:filter_rows(column='ward', op=eq, value='paramedic')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='extreme')}
+    \boxed{tool:order_lab(patient_id=106, test='echo')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='45')}
+    \boxed{tool:schedule_proc(patient_id=85, proc_id=23)}
+    \boxed{tool:unique_count(column='status')}
+    \boxed{answer:0}
+
+[Complexity 5 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 32 | Actual steps: 34
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='staff')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='surgeon')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='onc')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='triage')}
+    \boxed{tool:schedule_proc(patient_id=101, proc_id=26)}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='running')}
+    \boxed{tool:assign_bed(patient_id=18, bed_id=29)}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='clerk')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='repair')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='16')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='pharm')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='paramedic')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='hep')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:assign_bed(patient_id=112, bed_id=24)}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='in')}
+    \boxed{tool:order_lab(patient_id=24, test='us')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='in')}
+    \boxed{tool:schedule_proc(patient_id=10, proc_id=11)}
+    \boxed{tool:schedule_proc(patient_id=137, proc_id=78)}
+    \boxed{tool:schedule_proc(patient_id=62, proc_id=38)}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='ent')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='er')}
+    \boxed{tool:schedule_proc(patient_id=71, proc_id=58)}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 5 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='scan')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='7.5')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='107')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='uric')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='queued')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='transplant')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='191')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:assign_bed(patient_id=22, bed_id=3)}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='drain')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='repair')}
+    \boxed{tool:schedule_proc(patient_id=66, proc_id=68)}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='wardb')}
+    \boxed{tool:assign_bed(patient_id=38, bed_id=5)}
+    \boxed{tool:assign_bed(patient_id=107, bed_id=45)}
+    \boxed{tool:schedule_proc(patient_id=116, proc_id=2)}
+    \boxed{tool:filter_rows(column='test', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='241')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:assign_bed(patient_id=141, bed_id=30)}
+    \boxed{tool:filter_rows(column='test', op=eq, value='hep')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='paramedic')}
+    \boxed{tool:schedule_proc(patient_id=8, proc_id=30)}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='stable')}
+    \boxed{tool:assign_bed(patient_id=121, bed_id=6)}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 5 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='patients')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='132')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='204')}
+    \boxed{tool:schedule_proc(patient_id=6, proc_id=48)}
+    \boxed{tool:filter_rows(column='age', op=lt, value='74')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:assign_bed(patient_id=109, bed_id=92)}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='stable')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='30')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='241')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='critical')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:filter_rows(column='gender', op=eq, value='Y')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='69')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='out')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='triage')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='queued')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='echo')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='derm')}
+    \boxed{tool:order_lab(patient_id=114, test='hep')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='80')}
+    \boxed{tool:schedule_proc(patient_id=25, proc_id=59)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='released')}
+    \boxed{tool:schedule_proc(patient_id=67, proc_id=34)}
+    \boxed{tool:schedule_proc(patient_id=60, proc_id=92)}
+    \boxed{tool:unique_count(column='ward')}
+    \boxed{answer:0}
+
+[Complexity 5 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='labs')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='wardb')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='67')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:order_lab(patient_id=84, test='lipid')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='8.39')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='10.55')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='running')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='value', op=lt, value='11.08')}
+    \boxed{tool:assign_bed(patient_id=97, bed_id=14)}
+    \boxed{tool:filter_rows(column='role', op=eq, value='final')}
+    \boxed{tool:filter_rows(column='test', op=eq, value='lipid')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='211')}
+    \boxed{tool:assign_bed(patient_id=65, bed_id=81)}
+    \boxed{tool:order_lab(patient_id=68, test='uric')}
+    \boxed{tool:assign_bed(patient_id=97, bed_id=79)}
+    \boxed{tool:assign_bed(patient_id=68, bed_id=20)}
+    \boxed{tool:schedule_proc(patient_id=35, proc_id=8)}
+    \boxed{tool:assign_bed(patient_id=36, bed_id=49)}
+    \boxed{tool:filter_rows(column='value', op=lt, value='5.37')}
+    \boxed{tool:order_lab(patient_id=20, test='hep')}
+    \boxed{tool:schedule_proc(patient_id=18, proc_id=53)}
+    \boxed{tool:schedule_proc(patient_id=91, proc_id=78)}
+    \boxed{tool:filter_rows(column='role', op=eq, value='running')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='hep')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='225')}
+    \boxed{tool:assign_bed(patient_id=112, bed_id=84)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='stable')}
+    \boxed{tool:compute_avg(column='value')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='procedures')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='scan')}
+    \boxed{tool:schedule_proc(patient_id=43, proc_id=44)}
+    \boxed{tool:filter_rows(column='availability', op=eq, value='renal')}
+    \boxed{tool:join_table(name='labs', left_on='patient_id', right_on='patient_id', how='inner')}
+    \boxed{tool:join_table(name='staff', left_on='ward', right_on='specialty', how='inner')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='pharm')}
+    \boxed{tool:join_table(name='procedures', left_on='patient_id', right_on='proc_id', how='inner')}
+    \boxed{tool:join_table(name='beds', left_on='ward', right_on='ward', how='inner')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='major')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='109')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='True')}
+    \boxed{tool:assign_bed(patient_id=64, bed_id=42)}
+    \boxed{tool:schedule_proc(patient_id=16, proc_id=8)}
+    \boxed{tool:schedule_proc(patient_id=92, proc_id=56)}
+    \boxed{tool:order_lab(patient_id=59, test='uric')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='triage')}
+    \boxed{tool:order_lab(patient_id=83, test='us')}
+    \boxed{tool:order_lab(patient_id=128, test='lipid')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='path')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='minor')}
+    \boxed{tool:filter_rows(column='role', op=eq, value='us')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='scan')}
+    \boxed{tool:filter_rows(column='risk', op=eq, value='extreme')}
+    \boxed{tool:filter_rows(column='value', op=gt, value='21')}
+    \boxed{tool:filter_rows(column='specialty', op=eq, value='pharm')}
+    \boxed{tool:order_lab(patient_id=52, test='lipid')}
+    \boxed{tool:filter_rows(column='occupied', op=eq, value='paramedic')}
+    \boxed{tool:schedule_proc(patient_id=85, proc_id=23)}
+    \boxed{tool:schedule_proc(patient_id=11, proc_id=70)}
+    \boxed{tool:unique_count(column='role')}
+    \boxed{answer:0}
+
+
+===== Summary =====
+Total cases: 25
+Successes: 25
+Failures: 0
+Elapsed: 0.06s
+Success rate: 100.0%

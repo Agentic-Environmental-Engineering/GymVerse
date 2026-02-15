@@ -1,0 +1,887 @@
+[Complexity 1 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 24 | Actual steps: 26
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='spares')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='central')}
+    \boxed{tool:request_spares(store_id=65, part='cable', qty=7)}
+    \boxed{tool:filter_rows(column='part', op=eq, value='switch')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='med')}
+    \boxed{tool:request_spares(store_id=73, part='cable', qty=47)}
+    \boxed{tool:dispatch_crew(ticket_id=108, crew_id='A')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='157')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='85')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='west')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='62')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='84')}
+    \boxed{tool:toggle_breaker(asset_id=90, state='close')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='62')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='south')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='transformer')}
+    \boxed{tool:schedule_outage(asset_id=62, window='night')}
+    \boxed{tool:dispatch_crew(ticket_id=48, crew_id='B')}
+    \boxed{tool:request_spares(store_id=15, part='sensor', qty=19)}
+    \boxed{tool:filter_rows(column='part', op=eq, value='cable')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='49')}
+    \boxed{tool:compute_sum(column='eta')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:schedule_outage(asset_id=8, window='weekend')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='186')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='north')}
+    \boxed{tool:toggle_breaker(asset_id=70, state='open')}
+    \boxed{tool:dispatch_crew(ticket_id=23, crew_id='E')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='cable')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=2, window='weekend')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:request_spares(store_id=45, part='fuse', qty=18)}
+    \boxed{tool:filter_rows(column='part', op=eq, value='sensor')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='130')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='61')}
+    \boxed{tool:toggle_breaker(asset_id=87, state='close')}
+    \boxed{tool:dispatch_crew(ticket_id=69, crew_id='E')}
+    \boxed{tool:request_spares(store_id=33, part='oil', qty=26)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='in_progress')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='transformer')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='switch')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='108')}
+    \boxed{tool:compute_sum(column='age')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:dispatch_crew(ticket_id=17, crew_id='B')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='80')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='in_progress')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='107')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='closed')}
+    \boxed{tool:toggle_breaker(asset_id=42, state='open')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:toggle_breaker(asset_id=92, state='close')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='45')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='126')}
+    \boxed{tool:toggle_breaker(asset_id=80, state='open')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='breaker')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='132')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='80')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='132')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='194')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=29, window='weekend')}
+    \boxed{tool:compute_avg(column='cost')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='faults')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='76')}
+    \boxed{tool:request_spares(store_id=15, part='oil', qty=13)}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='73')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='switch')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='overload')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='40')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='equipment')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='23')}
+    \boxed{tool:dispatch_crew(ticket_id=33, crew_id='E')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='179')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='163')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='open')}
+    \boxed{tool:dispatch_crew(ticket_id=87, crew_id='D')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='106')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='150')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='56')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=38, window='offpeak')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='cable')}
+    \boxed{tool:compute_sum(column='load')}
+    \boxed{answer:0.0}
+
+[Complexity 1 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 23 | Actual steps: 25
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='tickets')}
+    \boxed{tool:dispatch_crew(ticket_id=28, crew_id='B')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='east')}
+    \boxed{tool:request_spares(store_id=63, part='fuse', qty=19)}
+    \boxed{tool:filter_rows(column='load', op=lt, value='112')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='84')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='74')}
+    \boxed{tool:dispatch_crew(ticket_id=25, crew_id='A')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='low')}
+    \boxed{tool:dispatch_crew(ticket_id=44, crew_id='C')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='cable')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='central')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=105, window='offpeak')}
+    \boxed{tool:request_spares(store_id=61, part='switch', qty=33)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='east')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='in_progress')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='130')}
+    \boxed{tool:dispatch_crew(ticket_id=9, crew_id='B')}
+    \boxed{tool:schedule_outage(asset_id=73, window='night')}
+    \boxed{tool:compute_sum(column='age')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 26 | Actual steps: 28
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='spares')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='81')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='west')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='central')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='switch')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:request_spares(store_id=35, part='fuse', qty=50)}
+    \boxed{tool:schedule_outage(asset_id=62, window='night')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='med')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='157')}
+    \boxed{tool:schedule_outage(asset_id=24, window='night')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='85')}
+    \boxed{tool:request_spares(store_id=65, part='cable', qty=7)}
+    \boxed{tool:request_spares(store_id=46, part='sensor', qty=35)}
+    \boxed{tool:filter_rows(column='load', op=gt, value='48')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='62')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='84')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='62')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='81')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='142')}
+    \boxed{tool:request_spares(store_id=82, part='fuse', qty=13)}
+    \boxed{tool:filter_rows(column='part', op=eq, value='in_progress')}
+    \boxed{tool:request_spares(store_id=76, part='cable', qty=42)}
+    \boxed{tool:unique_count(column='severity')}
+    \boxed{answer:0}
+
+[Complexity 2 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:schedule_outage(asset_id=8, window='weekend')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='186')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='north')}
+    \boxed{tool:toggle_breaker(asset_id=70, state='open')}
+    \boxed{tool:dispatch_crew(ticket_id=23, crew_id='E')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='cable')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=58, window='night')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:request_spares(store_id=45, part='fuse', qty=18)}
+    \boxed{tool:filter_rows(column='part', op=eq, value='sensor')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='130')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='61')}
+    \boxed{tool:toggle_breaker(asset_id=87, state='close')}
+    \boxed{tool:dispatch_crew(ticket_id=69, crew_id='E')}
+    \boxed{tool:request_spares(store_id=33, part='oil', qty=26)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='in_progress')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='transformer')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='switch')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='108')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='75')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='78')}
+    \boxed{tool:compute_sum(column='age')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='closed')}
+    \boxed{tool:dispatch_crew(ticket_id=17, crew_id='B')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='central')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='in_progress')}
+    \boxed{tool:toggle_breaker(asset_id=63, state='close')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='107')}
+    \boxed{tool:toggle_breaker(asset_id=92, state='close')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='closed')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:toggle_breaker(asset_id=97, state='close')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='45')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='126')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='breaker')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='132')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='87')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=40, window='offpeak')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='194')}
+    \boxed{tool:compute_sum(column='load')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='faults')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='76')}
+    \boxed{tool:request_spares(store_id=15, part='oil', qty=13)}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='73')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='switch')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='overload')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='40')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='equipment')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='23')}
+    \boxed{tool:dispatch_crew(ticket_id=33, crew_id='E')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='179')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='163')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='open')}
+    \boxed{tool:dispatch_crew(ticket_id=31, crew_id='C')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='106')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='150')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='56')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=53, window='weekend')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='cable')}
+    \boxed{tool:dispatch_crew(ticket_id=62, crew_id='E')}
+    \boxed{tool:schedule_outage(asset_id=34, window='offpeak')}
+    \boxed{tool:compute_avg(column='cost')}
+    \boxed{answer:0.0}
+
+[Complexity 2 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 25 | Actual steps: 27
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='tickets')}
+    \boxed{tool:schedule_outage(asset_id=63, window='offpeak')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='cable')}
+    \boxed{tool:schedule_outage(asset_id=16, window='weekend')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='23')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='133')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='central')}
+    \boxed{tool:schedule_outage(asset_id=15, window='weekend')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='86')}
+    \boxed{tool:dispatch_crew(ticket_id=57, crew_id='D')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='111')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='130')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:toggle_breaker(asset_id=51, state='open')}
+    \boxed{tool:request_spares(store_id=27, part='switch', qty=15)}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='170')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='84')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='substation')}
+    \boxed{tool:dispatch_crew(ticket_id=89, crew_id='D')}
+    \boxed{tool:request_spares(store_id=62, part='relay', qty=20)}
+    \boxed{tool:dispatch_crew(ticket_id=28, crew_id='C')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='60')}
+    \boxed{tool:compute_sum(column='load')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 28 | Actual steps: 30
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='spares')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='81')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='west')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='central')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='switch')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:request_spares(store_id=94, part='oil', qty=12)}
+    \boxed{tool:schedule_outage(asset_id=92, window='night')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='med')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='157')}
+    \boxed{tool:schedule_outage(asset_id=24, window='night')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='85')}
+    \boxed{tool:request_spares(store_id=65, part='cable', qty=7)}
+    \boxed{tool:request_spares(store_id=46, part='sensor', qty=35)}
+    \boxed{tool:filter_rows(column='load', op=gt, value='48')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='62')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='84')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='62')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='81')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='142')}
+    \boxed{tool:request_spares(store_id=82, part='fuse', qty=13)}
+    \boxed{tool:filter_rows(column='part', op=eq, value='in_progress')}
+    \boxed{tool:request_spares(store_id=76, part='cable', qty=42)}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='63')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='24')}
+    \boxed{tool:unique_count(column='severity')}
+    \boxed{answer:0}
+
+[Complexity 3 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:schedule_outage(asset_id=67, window='offpeak')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='186')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='north')}
+    \boxed{tool:toggle_breaker(asset_id=99, state='open')}
+    \boxed{tool:dispatch_crew(ticket_id=23, crew_id='E')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='cable')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=58, window='night')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:request_spares(store_id=45, part='fuse', qty=18)}
+    \boxed{tool:filter_rows(column='part', op=eq, value='sensor')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='130')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='61')}
+    \boxed{tool:toggle_breaker(asset_id=87, state='close')}
+    \boxed{tool:dispatch_crew(ticket_id=54, crew_id='C')}
+    \boxed{tool:request_spares(store_id=33, part='oil', qty=26)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='in_progress')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='transformer')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='switch')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='108')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='75')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='78')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='breaker')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='open')}
+    \boxed{tool:compute_sum(column='age')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='126')}
+    \boxed{tool:schedule_outage(asset_id=55, window='offpeak')}
+    \boxed{tool:toggle_breaker(asset_id=79, state='open')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='87')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='45')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='closed')}
+    \boxed{tool:toggle_breaker(asset_id=94, state='close')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='central')}
+    \boxed{tool:dispatch_crew(ticket_id=11, crew_id='A')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='closed')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='78')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='98')}
+    \boxed{tool:toggle_breaker(asset_id=8, state='close')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='7')}
+    \boxed{tool:toggle_breaker(asset_id=123, state='open')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='80')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='central')}
+    \boxed{tool:schedule_outage(asset_id=20, window='night')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='132')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='substation')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:toggle_breaker(asset_id=67, state='close')}
+    \boxed{tool:compute_sum(column='load')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='faults')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='175')}
+    \boxed{tool:request_spares(store_id=53, part='fuse', qty=44)}
+    \boxed{tool:filter_rows(column='load', op=gt, value='76')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='73')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='switch')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='overload')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='40')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='equipment')}
+    \boxed{tool:dispatch_crew(ticket_id=15, crew_id='C')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='substation')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='179')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='183')}
+    \boxed{tool:dispatch_crew(ticket_id=31, crew_id='C')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='23')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='critical')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=53, window='weekend')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='56')}
+    \boxed{tool:dispatch_crew(ticket_id=62, crew_id='E')}
+    \boxed{tool:schedule_outage(asset_id=56, window='weekend')}
+    \boxed{tool:toggle_breaker(asset_id=65, state='open')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='cable')}
+    \boxed{tool:compute_avg(column='stock')}
+    \boxed{answer:0.0}
+
+[Complexity 3 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 27 | Actual steps: 29
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='tickets')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='86')}
+    \boxed{tool:request_spares(store_id=10, part='oil', qty=45)}
+    \boxed{tool:filter_rows(column='part', op=eq, value='east')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='38')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='central')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='60')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='18')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='196')}
+    \boxed{tool:toggle_breaker(asset_id=46, state='open')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=123, window='weekend')}
+    \boxed{tool:request_spares(store_id=22, part='switch', qty=48)}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='80')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='assigned')}
+    \boxed{tool:dispatch_crew(ticket_id=42, crew_id='A')}
+    \boxed{tool:toggle_breaker(asset_id=107, state='close')}
+    \boxed{tool:toggle_breaker(asset_id=107, state='open')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='low')}
+    \boxed{tool:toggle_breaker(asset_id=15, state='open')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='in_progress')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='111')}
+    \boxed{tool:request_spares(store_id=2, part='oil', qty=7)}
+    \boxed{tool:unique_count(column='type')}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 30 | Actual steps: 32
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='spares')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='in_progress')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='48')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='24')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:toggle_breaker(asset_id=72, state='open')}
+    \boxed{tool:toggle_breaker(asset_id=63, state='open')}
+    \boxed{tool:dispatch_crew(ticket_id=86, crew_id='B')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='49')}
+    \boxed{tool:request_spares(store_id=21, part='cable', qty=38)}
+    \boxed{tool:toggle_breaker(asset_id=50, state='close')}
+    \boxed{tool:dispatch_crew(ticket_id=1, crew_id='E')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='line')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='fuse')}
+    \boxed{tool:request_spares(store_id=33, part='fuse', qty=43)}
+    \boxed{tool:filter_rows(column='region', op=eq, value='central')}
+    \boxed{tool:toggle_breaker(asset_id=40, state='close')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='59')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='breaker')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='fuse')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='south')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='81')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='oil')}
+    \boxed{tool:request_spares(store_id=91, part='relay', qty=28)}
+    \boxed{tool:request_spares(store_id=6, part='relay', qty=48)}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='32')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='62')}
+    \boxed{tool:compute_avg(column='eta')}
+    \boxed{answer:0.0}
+
+[Complexity 4 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='94')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:toggle_breaker(asset_id=110, state='open')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='75')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='west')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='north')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='cable')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='200')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='121')}
+    \boxed{tool:schedule_outage(asset_id=75, window='night')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='transformer')}
+    \boxed{tool:request_spares(store_id=51, part='relay', qty=7)}
+    \boxed{tool:toggle_breaker(asset_id=48, state='close')}
+    \boxed{tool:request_spares(store_id=61, part='fuse', qty=6)}
+    \boxed{tool:schedule_outage(asset_id=83, window='offpeak')}
+    \boxed{tool:schedule_outage(asset_id=53, window='weekend')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='west')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='cable')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='61')}
+    \boxed{tool:request_spares(store_id=14, part='oil', qty=37)}
+    \boxed{tool:request_spares(store_id=8, part='cable', qty=28)}
+    \boxed{tool:filter_rows(column='load', op=lt, value='61')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='closed')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='107')}
+    \boxed{tool:unique_count(column='part')}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:request_spares(store_id=15, part='switch', qty=10)}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:toggle_breaker(asset_id=59, state='close')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='194')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='98')}
+    \boxed{tool:toggle_breaker(asset_id=102, state='open')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='fuse')}
+    \boxed{tool:toggle_breaker(asset_id=106, state='close')}
+    \boxed{tool:toggle_breaker(asset_id=37, state='close')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='78')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:schedule_outage(asset_id=39, window='night')}
+    \boxed{tool:request_spares(store_id=88, part='relay', qty=32)}
+    \boxed{tool:dispatch_crew(ticket_id=134, crew_id='D')}
+    \boxed{tool:request_spares(store_id=14, part='switch', qty=13)}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:dispatch_crew(ticket_id=2, crew_id='C')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='45')}
+    \boxed{tool:toggle_breaker(asset_id=10, state='close')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='94')}
+    \boxed{tool:request_spares(store_id=58, part='switch', qty=43)}
+    \boxed{tool:schedule_outage(asset_id=105, window='night')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='84')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='breaker')}
+    \boxed{tool:toggle_breaker(asset_id=5, state='open')}
+    \boxed{tool:schedule_outage(asset_id=109, window='offpeak')}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 4 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='faults')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='short')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='med')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='89')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='163')}
+    \boxed{tool:request_spares(store_id=93, part='sensor', qty=20)}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='weather')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='56')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:request_spares(store_id=26, part='fuse', qty=35)}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='90')}
+    \boxed{tool:dispatch_crew(ticket_id=14, crew_id='D')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='101')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='97')}
+    \boxed{tool:request_spares(store_id=39, part='oil', qty=21)}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='10')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='86')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='central')}
+    \boxed{tool:toggle_breaker(asset_id=9, state='open')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='183')}
+    \boxed{tool:dispatch_crew(ticket_id=103, crew_id='A')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='switch')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='40')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='transformer')}
+    \boxed{tool:request_spares(store_id=6, part='fuse', qty=49)}
+    \boxed{tool:compute_sum(column='age')}
+    \boxed{answer:0.0}
+
+[Complexity 4 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 29 | Actual steps: 31
+  Candidate: 0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.
+  Action sequence:
+    \boxed{tool:open_table(name='tickets')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='84')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='47')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='low')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='assigned')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='23')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='38')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='central')}
+    \boxed{tool:schedule_outage(asset_id=107, window='weekend')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='156')}
+    \boxed{tool:request_spares(store_id=80, part='oil', qty=37)}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='111')}
+    \boxed{tool:request_spares(store_id=50, part='fuse', qty=32)}
+    \boxed{tool:toggle_breaker(asset_id=54, state='open')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='80')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='cable')}
+    \boxed{tool:schedule_outage(asset_id=113, window='night')}
+    \boxed{tool:schedule_outage(asset_id=49, window='night')}
+    \boxed{tool:schedule_outage(asset_id=26, window='night')}
+    \boxed{tool:toggle_breaker(asset_id=20, state='open')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='133')}
+    \boxed{tool:toggle_breaker(asset_id=67, state='open')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='60')}
+    \boxed{tool:request_spares(store_id=29, part='switch', qty=8)}
+    \boxed{tool:request_spares(store_id=42, part='relay', qty=46)}
+    \boxed{tool:compute_count()}
+    \boxed{answer:0}
+
+[Complexity 5 | Seed 0] => SUCCESS | reward=1.0
+  Required steps: 32 | Actual steps: 34
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='spares')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='in_progress')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='48')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='24')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:toggle_breaker(asset_id=21, state='close')}
+    \boxed{tool:toggle_breaker(asset_id=30, state='close')}
+    \boxed{tool:dispatch_crew(ticket_id=22, crew_id='C')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='49')}
+    \boxed{tool:request_spares(store_id=21, part='cable', qty=38)}
+    \boxed{tool:toggle_breaker(asset_id=50, state='close')}
+    \boxed{tool:dispatch_crew(ticket_id=21, crew_id='A')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='line')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='fuse')}
+    \boxed{tool:request_spares(store_id=87, part='relay', qty=8)}
+    \boxed{tool:filter_rows(column='region', op=eq, value='central')}
+    \boxed{tool:toggle_breaker(asset_id=40, state='close')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='59')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='breaker')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='fuse')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='south')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='81')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='oil')}
+    \boxed{tool:request_spares(store_id=32, part='fuse', qty=22)}
+    \boxed{tool:request_spares(store_id=6, part='relay', qty=48)}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='32')}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='62')}
+    \boxed{tool:schedule_outage(asset_id=86, window='night')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='157')}
+    \boxed{tool:compute_avg(column='stock')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 1] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='108')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='cable')}
+    \boxed{tool:dispatch_crew(ticket_id=69, crew_id='E')}
+    \boxed{tool:request_spares(store_id=59, part='oil', qty=11)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='substation')}
+    \boxed{tool:dispatch_crew(ticket_id=54, crew_id='E')}
+    \boxed{tool:dispatch_crew(ticket_id=98, crew_id='E')}
+    \boxed{tool:schedule_outage(asset_id=65, window='night')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=52, window='offpeak')}
+    \boxed{tool:filter_rows(column='cost', op=lt, value='23')}
+    \boxed{tool:dispatch_crew(ticket_id=70, crew_id='C')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='200')}
+    \boxed{tool:request_spares(store_id=15, part='switch', qty=16)}
+    \boxed{tool:request_spares(store_id=9, part='sensor', qty=7)}
+    \boxed{tool:toggle_breaker(asset_id=5, state='close')}
+    \boxed{tool:dispatch_crew(ticket_id=126, crew_id='B')}
+    \boxed{tool:dispatch_crew(ticket_id=56, crew_id='E')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='110')}
+    \boxed{tool:dispatch_crew(ticket_id=130, crew_id='C')}
+    \boxed{tool:toggle_breaker(asset_id=130, state='close')}
+    \boxed{tool:filter_rows(column='age', op=lt, value='75')}
+    \boxed{tool:toggle_breaker(asset_id=117, state='close')}
+    \boxed{tool:request_spares(store_id=87, part='fuse', qty=10)}
+    \boxed{tool:schedule_outage(asset_id=11, window='weekend')}
+    \boxed{tool:schedule_outage(asset_id=64, window='weekend')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='north')}
+    \boxed{tool:request_spares(store_id=33, part='sensor', qty=37)}
+    \boxed{tool:compute_sum(column='age')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 2] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='assets')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:request_spares(store_id=15, part='switch', qty=10)}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:toggle_breaker(asset_id=59, state='close')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='198')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='194')}
+    \boxed{tool:toggle_breaker(asset_id=76, state='close')}
+    \boxed{tool:filter_rows(column='load', op=gt, value='98')}
+    \boxed{tool:toggle_breaker(asset_id=16, state='close')}
+    \boxed{tool:toggle_breaker(asset_id=118, state='open')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='fuse')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='78')}
+    \boxed{tool:schedule_outage(asset_id=39, window='night')}
+    \boxed{tool:request_spares(store_id=49, part='relay', qty=48)}
+    \boxed{tool:dispatch_crew(ticket_id=134, crew_id='D')}
+    \boxed{tool:request_spares(store_id=14, part='switch', qty=13)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='line')}
+    \boxed{tool:dispatch_crew(ticket_id=19, crew_id='A')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='east')}
+    \boxed{tool:toggle_breaker(asset_id=10, state='close')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='45')}
+    \boxed{tool:request_spares(store_id=58, part='switch', qty=43)}
+    \boxed{tool:schedule_outage(asset_id=105, window='night')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='94')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='breaker')}
+    \boxed{tool:toggle_breaker(asset_id=94, state='open')}
+    \boxed{tool:schedule_outage(asset_id=109, window='offpeak')}
+    \boxed{tool:toggle_breaker(asset_id=109, state='open')}
+    \boxed{tool:request_spares(store_id=78, part='cable', qty=46)}
+    \boxed{tool:compute_avg(column='stock')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 3] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='faults')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:schedule_outage(asset_id=75, window='offpeak')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='load', op=lt, value='56')}
+    \boxed{tool:dispatch_crew(ticket_id=78, crew_id='D')}
+    \boxed{tool:filter_rows(column='region', op=eq, value='substation')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='central')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='10')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='low')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='short')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='critical')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='open')}
+    \boxed{tool:request_spares(store_id=5, part='oil', qty=5)}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='med')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:filter_rows(column='duration', op=lt, value='89')}
+    \boxed{tool:toggle_breaker(asset_id=27, state='close')}
+    \boxed{tool:request_spares(store_id=101, part='fuse', qty=7)}
+    \boxed{tool:filter_rows(column='type', op=eq, value='weather')}
+    \boxed{tool:request_spares(store_id=7, part='fuse', qty=35)}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='35')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='23')}
+    \boxed{tool:toggle_breaker(asset_id=68, state='close')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='73')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='switch')}
+    \boxed{tool:filter_rows(column='duration', op=gt, value='97')}
+    \boxed{tool:request_spares(store_id=93, part='sensor', qty=20)}
+    \boxed{tool:filter_rows(column='stock', op=gt, value='78')}
+    \boxed{tool:request_spares(store_id=53, part='relay', qty=17)}
+    \boxed{tool:compute_avg(column='cost')}
+    \boxed{answer:0.0}
+
+[Complexity 5 | Seed 4] => SUCCESS | reward=1.0
+  Required steps: 31 | Actual steps: 33
+  Candidate: 0.0 | Solution: 0.0
+  Final obs: Success: correct final answer 0.0.
+  Action sequence:
+    \boxed{tool:open_table(name='tickets')}
+    \boxed{tool:join_table(name='tickets', left_on='ticket_id', right_on='ticket_id', how='inner')}
+    \boxed{tool:toggle_breaker(asset_id=15, state='open')}
+    \boxed{tool:join_table(name='spares', left_on='region', right_on='region', how='inner')}
+    \boxed{tool:join_table(name='faults', left_on='fault_id', right_on='fault_id', how='inner')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:toggle_breaker(asset_id=66, state='open')}
+    \boxed{tool:filter_rows(column='cost', op=gt, value='18')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='cable')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='60')}
+    \boxed{tool:filter_rows(column='age', op=gt, value='64')}
+    \boxed{tool:filter_rows(column='stock', op=lt, value='196')}
+    \boxed{tool:filter_rows(column='eta', op=gt, value='86')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='170')}
+    \boxed{tool:filter_rows(column='severity', op=eq, value='central')}
+    \boxed{tool:filter_rows(column='part', op=eq, value='low')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:dispatch_crew(ticket_id=14, crew_id='C')}
+    \boxed{tool:schedule_outage(asset_id=18, window='offpeak')}
+    \boxed{tool:filter_rows(column='type', op=eq, value='low')}
+    \boxed{tool:request_spares(store_id=49, part='relay', qty=24)}
+    \boxed{tool:request_spares(store_id=42, part='relay', qty=46)}
+    \boxed{tool:toggle_breaker(asset_id=84, state='open')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='152')}
+    \boxed{tool:request_spares(store_id=61, part='sensor', qty=25)}
+    \boxed{tool:schedule_outage(asset_id=25, window='night')}
+    \boxed{tool:filter_rows(column='eta', op=lt, value='23')}
+    \boxed{tool:filter_rows(column='status', op=eq, value='open')}
+    \boxed{tool:schedule_outage(asset_id=113, window='night')}
+    \boxed{tool:schedule_outage(asset_id=60, window='weekend')}
+    \boxed{tool:compute_avg(column='load')}
+    \boxed{answer:0.0}
+
+
+===== Summary =====
+Total cases: 25
+Successes: 25
+Failures: 0
+Elapsed: 0.08s
+Success rate: 100.0%
