@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>GymVerse: How Far Are We from Fully Automated Environment Scaling for Self-Evolving Agents?</title>
+  <link rel="icon" type="image/png" href="static/images/gymlogo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <img src="static/images/gymlogo.png" alt="GymVerse Logo" style="height: 46px; vertical-align: middle; margin-right: 10px;">
+              GymVerse: How Far Are We from Fully Automated Environment Scaling for Self-Evolving Agents?
+            </h1>
+                  <div class="is-size-5 publication-authors">
+                    <!-- Paper authors -->
+                    <span class="author-block">
+                      <a href="#">Zhuoran Jin</a><sup>1,2,*</sup>,</span>
+                    <span class="author-block">
+                      <a href="#">Longxiang Wang</a><sup>1,2,*</sup>,</span>
+                    <span class="author-block">
+                        <a href="#">Shengjia Hua</a><sup>1,2,*</sup>,</span>
+                    <span class="author-block">
+                      <a href="#">Zhitao He</a><sup>1,2</sup>,</span>
+                    <p></p>
+                    <span class="author-block">
+                      <a href="#">Hongbang Yuan</a><sup>1,2</sup>,</span>
+                    <span class="author-block">
+                      <a href="#">Kejian Zhu</a><sup>1,2</sup>,</span>
+                    <span class="author-block">
+                      <a href="#">Yupu Hao</a><sup>1,2</sup>,</span>
+                    <span class="author-block">
+                      <a href="#">Jiachun Li</a><sup>1,2</sup>,</span>
+                    <span class="author-block">
+                      <a href="#">Kang Liu</a><sup>1,2</sup>,</span>
+                    <span class="author-block">
+                      <a href="#">Jun Zhao</a><sup>1,2</sup></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors" style="margin-top: -8px;">
+                    <span class="author-block"><sup>1</sup>Institute of Automation, Chinese Academy of Sciences,</span>
+                    <span class="author-block"><sup>2</sup>School of Artificial Intelligence, University of Chinese Academy of Sciences</span>
+                  </div>
+
+                  <div class="is-size-6 publication-authors" style="margin-top: -4px;">
+                    <span class="author-block"><em>*Equal Contribution</em></span>
+                  </div>
+                  <div class="is-size-5 publication-authors" style="margin-top: -4px;">
+                    <span class="author-block"><b>Under Review</b></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links" style="margin-bottom: 0;">
+                      <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="<PAPER_URL>"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="<ARXIV_URL>"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!--<span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>-->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Agentic-Environmental-Engineering/GymVerse"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!--<span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Era Quote -->
+<section class="section hero is-small" style="padding-top: 0.5rem; margin-top: -0.75rem;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div style="max-width: 780px; margin: 0 auto; padding: 12px 18px; background: #f8fafc; border-left: 6px solid #2563eb; border-radius: 12px;">
+        <p style="font-size: 1.6rem; font-weight: 700; letter-spacing: 0.4px; margin: 0 0 6px;">
+          “Welcome to the Era of Experience.”
+        </p>
+        <p style="font-size: 1rem; color: #64748b; margin: 0; text-align: right;">
+          — David Silver and Richard S. Sutton
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Era Quote -->
+
+<!-- Opening Image-->
+<section class="hero teaser gymverse-teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div align=center>
+        <img src="static/images/env.png" alt="GymVerse Overview" style="width: 100%;">
+        <h2 class="subtitle has-text-centered">
+          <div align=justify>
+            Overview of the automated environment synthesis pipeline. (a) Environment synthesis workflow with complexity control; (b) Key functions defining the synthesized environment program; (c) Interaction loop between the agent and the synthesized environment.
+          </div>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Opening Image -->
+
+<!-- Abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>As the learning paradigm transitions from static data to interaction-driven experience, environments play a central role in enabling agents to learn, adapt, and evolve continuously through interaction. Yet the high cost and limited scalability of manually constructed environments pose a fundamental bottleneck to experience learning for agents. Therefore, automatically scaling environments is a necessary step toward the era of experience.</p>
+          
+          <p>In this paper, we investigate <em>how far we are from fully automated environment scaling for self-evolving agents</em>. Specifically, our contributions are threefold: <strong>(1)</strong> We propose an automated environment synthesis workflow with explicit control over environment complexity, enabling environments to adapt to the agent’s evolving capabilities; <strong>(2)</strong> We introduce a principled evaluation framework to assess synthesized environments along the dimensions of correctness, difficulty, and diversity; <strong>(3)</strong> We conduct a systematic study and find that environment properties such as scale, complexity, correctness, and feedback design play a critical role in agent learning.</p>
+          
+          <p>To this end, we introduce <span class="dnerf">GymVerse</span>, a comprehensive framework for environment synthesis, evaluation, and agent training. We further propose a simple yet effective reinforcement learning algorithm <strong>(PERPO)</strong> to support stable training on synthesized and evolving environments.</p>
+          
+          <p>Extensive experiments on GymVerse demonstrate that training on synthesized environments enables effective generalization to unseen environments.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Abstract -->
+
+
+<!-- Research Questions -->
+<section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div align=center>
+        <h2 class="title is-3">🔍 Research Questions</h2>
+      </div>
+      <div class="content has-text-justified" style="font-size: 1.45rem;">
+        <p>
+          <span style="display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#1d4ed8;font-weight:700;">RQ I</span>
+          <strong>How can environments be automatically synthesized and continuously evolved?</strong>
+        </p>
+        <p>
+          <span style="display:inline-block;padding:4px 10px;border-radius:999px;background:#ecfdf3;color:#047857;font-weight:700;">RQ II</span>
+          <strong>What dimensions are essential for evaluating synthesized environments?</strong>
+        </p>
+        <p>
+          <span style="display:inline-block;padding:4px 10px;border-radius:999px;background:#fff7ed;color:#c2410c;font-weight:700;">RQ III</span>
+          <strong>Which environment properties most strongly influence agent learning?</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Research Questions -->
+
+
+<!-- Method -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div align=center>
+        <h2 class="title is-3">🧠 Method</h2>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <h3 class="subtitle has-text-centered" style="font-size: 1.55rem; font-weight: 700; letter-spacing: 0.3px;">
+          <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; background: #eef2ff; color: #1d4ed8;">
+            Environment Synthesis
+          </span>
+        </h3>
+        <div class="content has-text-justified">
+          <p>We posit that effective environments should adapt their difficulty dynamically as an agent’s learning progresses, thereby maintaining an appropriate level of challenge that supports efficient learning.</p>
+          <p>To this end, we formalize <em>environment complexity</em> as an explicit control variable in environment synthesis, reflected in factors such as interaction length, environment structure, and transition dependencies.</p>
+          <p>We model environment synthesis as a two-stage LLM workflow: an <strong>abstraction</strong> stage that produces high-level environment design concepts capturing the core interaction logic, followed by a <strong>construction</strong> stage that translates these concepts into executable and verifiable environment code.</p>
+          <p>Our synthesis workflow supports the generation of environments across multiple domains, including
+            <span class="domain-tool">Tool</span>,
+            <span class="domain-game">Game</span>,
+            <span class="domain-algo">Algo</span>, and
+            <span class="domain-logic">Logic</span>.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <h3 class="subtitle has-text-centered" style="font-size: 1.55rem; font-weight: 700; letter-spacing: 0.3px;">
+          <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; background: #ecfdf3; color: #047857;">
+            Environment Evaluation
+          </span>
+        </h3>
+        <div class="content has-text-justified">
+          <p>We therefore decompose environment evaluation into three dimensions: correctness, difficulty, and diversity.</p>
+          <p>For <strong>correctness</strong>, we adopt a three-stage evaluation pipeline consisting of an <em>execution checker</em> that validates environment functionality via unit tests, a <em>solvability solver</em> that algorithmically verifies the existence of valid solutions, and a <em>rubric judge</em> that assesses compliance with predefined requirements.</p>
+          <p>For <strong>difficulty</strong>, we quantify environment difficulty based on agent performance measured by success rate over multiple randomly sampled task instances. We find that the synthesized environment complexity is strongly correlated with the resulting environment difficulty.</p>
+          <p>For <strong>diversity</strong>, our analysis shows that strong LLMs generate environments that are well separated across domains, while maintaining meaningful variability within the same domain.</p>
+        </div>
+      </div>
+      <div class="item">
+        <h3 class="subtitle has-text-centered" style="font-size: 1.55rem; font-weight: 700; letter-spacing: 0.3px;">
+          <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; background: #fff7ed; color: #c2410c;">
+            Agent Training (PERPO)
+          </span>
+        </h3>
+        <div class="content has-text-justified">
+          <p>To support training on synthesized environments in GymVerse, we propose <strong>Progressive Environment Relative Policy Optimization (PERPO)</strong>, which performs advantage normalization at the environment level and progressively evolves environment complexity, leading to more stable and effective agentic reinforcement learning.</p>
+          <p>We compute the environment-level advantage by normalizing returns over all trajectories sampled from the same environment:</p>
+          <p>$$A^{(n)}_t = \frac{G^{(n)}_t - \operatorname{mean}(\mathcal{G}_e)}{\operatorname{std}(\mathcal{G}_e)}$$</p>
+          <p>The resulting PERPO objective is defined as:</p>
+          <p>$$\mathcal{J}_{\text{PERPO}}(\theta)=\frac{1}{N}\sum_{n=1}^{N}\sum_{t=1}^{T}A^{(n)}_t\log \pi_\theta\!\left(a^{(n)}_t \mid o^{(n)}_t\right)$$</p>
+          <p>In addition, PERPO incorporates progressive complexity scaling, where the environment complexity is adaptively adjusted based on the agent’s performance. Let \(c_t\) denote the environment complexity at training step \(t\):</p>
+          <p>$$c_t \leftarrow \min(c_t+1, c_{\max})\ \text{if } \bar{G}>\tau^{+},\quad c_t \leftarrow \max(c_t-1, c_{\min})\ \text{if } \bar{G}<\tau^{-}$$</p>
+        </div>
+     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Method -->
+<!-- Experiments -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">
+        <div align=center>📊 Experiments</div>
+      </h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="font-size: 1.55rem; font-weight: 700; letter-spacing: 0.3px;">
+            <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; background: #eef2ff; color: #1d4ed8;">
+              Environment Scaling
+            </span>
+          </h3>
+          <div class="content has-text-justified">
+            <p><strong>Environment scaling:</strong> Increasing the number of environments enhances generalization to unseen environments, though the gains saturate beyond a certain scale. Among the 64 rigorously verified environments, 32 are used for training (GymVerse-ID) and 32 unseen environments are reserved for evaluation (GymVerse-OOD).</p>
+            <div class="columns is-multiline">
+              <div class="column is-half">
+                <div class="image-body"><div align=center><img src="static/images/scaling_train_new-1.png" alt="Training dynamics on GymVerse-ID" style="width: 100%; max-height: 320px; object-fit: contain;"></div></div>
+                <p class="has-text-centered figure-caption">Training dynamics on GymVerse-ID.</p>
+              </div>
+              <div class="column is-half">
+                <div class="image-body"><div align=center><img src="static/images/scaling_eval-1.png" alt="Evaluation performance on GymVerse-OOD" style="width: 100%; max-height: 320px; object-fit: contain;"></div></div>
+                <p class="has-text-centered figure-caption">Evaluation performance on GymVerse-OOD.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="font-size: 1.55rem; font-weight: 700; letter-spacing: 0.3px;">
+            <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; background: #ecfdf3; color: #047857;">
+              Complexity Evolution
+            </span>
+          </h3>
+          <div class="content has-text-justified">
+            <p><strong>Complexity evolution:</strong> Gradually increasing environment complexity leads to improved learning performance and greater training stability compared to fixed-difficulty environments.</p>
+            <div class="image-body"><div align=center><img src="static/images/evolve-1.png" alt="Training dynamics with different complexity levels" style="width: 100%; max-height: 340px; object-fit: contain;"></div></div>
+            <p class="has-text-centered figure-caption">Training dynamics with different complexity levels.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="font-size: 1.55rem; font-weight: 700; letter-spacing: 0.3px;">
+            <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; background: #fff7ed; color: #c2410c;">
+              Correctness Filtering
+            </span>
+          </h3>
+          <div class="content has-text-justified">
+            <p><strong>Correctness filtering:</strong> Filtering out incorrect or unsound environments via environment evaluation significantly improves training efficiency. As shown in Figure, the presence of incorrect environments negatively interferes with learning, even on environments that are otherwise correctly verified.</p>
+            <div class="image-body"><div align=center><img src="static/images/correctness4-1.png" alt="Training dynamics comparing clean and mixed environment-quality settings" style="width: 100%; max-height: 420px; object-fit: contain;"></div></div>
+            <p class="has-text-centered figure-caption">Training dynamics comparing clean and mixed environment-quality settings across four shared correct environments.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="font-size: 1.55rem; font-weight: 700; letter-spacing: 0.3px;">
+            <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; background: #f3e8ff; color: #6d28d9;">
+              Feedback Design
+            </span>
+          </h3>
+          <div class="content has-text-justified">
+            <p><strong>Feedback design:</strong> Richer feedback, including informative environment observations and dense process rewards, consistently accelerates learning compared to sparse outcome rewards.</p>
+            <div class="image-body"><div align=center><img src="static/images/feedback-1.png" alt="Training dynamics with different feedback designs" style="width: 100%; max-height: 340px; object-fit: contain;"></div></div>
+            <p class="has-text-centered figure-caption">Training dynamics with different feedback designs.</p>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="font-size: 1.55rem; font-weight: 700; letter-spacing: 0.3px;">
+            <span style="display: inline-block; padding: 6px 16px; border-radius: 999px; background: #eff6ff; color: #1e40af;">
+              Domain Evaluation
+            </span>
+          </h3>
+          <div class="content has-text-justified">
+            <p>GymVerse-OOD is constructed to assess cross-environment generalization and consists of 8 environments from each of the four domains, namely Tool, Games, Algo, and Logic.</p>
+            <div class="image-body"><div align=center><img src="static/images/complexity_2x2-1.png" alt="Evaluation performance across four domains" style="width: 100%; max-height: 340px; object-fit: contain;"></div></div>
+            <p class="has-text-centered figure-caption">Evaluation performance across four domains under different environment complexity levels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Experiments -->
+
+
+<!-- Conclusion -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Conclusion</h2>
+        <div class="content has-text-justified" style="font-size: 1.35rem;">
+          <h3 class="subtitle has-text-justified" style="font-size: 1.35rem;">
+
+            <p>📏We introduce <span class="dnerf">GymVerse</span>, a comprehensive framework for environment synthesis, evaluation, and agent training.</p>
+          
+            <p>💥GymVerse supports the automatic generation of diverse environments across multiple domains, together with a multi-stage correctness filtering pipeline that ensures environment reliability for downstream training and evaluation.</p>
+            
+            <p>🧠Building on GymVerse, we systematically investigate how key environment properties, including environment scale, complexity evolution, correctness, and feedback design, affect agent learning dynamics and generalization.</p>
+            
+            <p>🚀In particular, training Qwen3-4B-Instruct on only 16 synthesized environments yields consistent and substantial generalization gains across both multi-turn and single-turn benchmarks, demonstrating strong robustness to unseen environments.</p>
+
+          </h3>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Conclusion -->
+
+<!-- Supplementary -->
+<section class="section hero is-light" id="Supplementary">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Supplementary</h2>
+        <div class="content has-text-justified" style="font-size: 1.1rem;">
+          <div id="supplementary-carousel" class="carousel results-carousel">
+      <div class="item">
+        <div class="image-body"><div align=center><img class="supplementary-img" src="static/images/屏幕截图 2026-02-15 174818.png" alt="Screenshot" style="width: 100%; max-height: 680px; object-fit: contain;"></div></div>
+      </div>
+      <div class="item">
+        <div class="image-body"><div align=center><img class="supplementary-img" src="static/images/屏幕截图 2026-02-15 174808.png" alt="Screenshot" style="width: 100%; max-height: 680px; object-fit: contain;"></div></div>
+      </div>
+      <div class="item">
+        <div class="image-body"><div align=center><img class="supplementary-img" src="static/images/屏幕截图 2026-02-15 174759.png" alt="Screenshot" style="width: 100%; max-height: 680px; object-fit: contain;"></div></div>
+      </div>
+      <div class="item">
+        <div class="image-body"><div align=center><img class="supplementary-img" src="static/images/屏幕截图 2026-02-15 174751.png" alt="Screenshot" style="width: 100%; max-height: 680px; object-fit: contain;"></div></div>
+      </div>
+      <div class="item">
+        <div class="image-body"><div align=center><img class="supplementary-img" src="static/images/屏幕截图 2026-02-15 174743.png" alt="Screenshot" style="width: 100%; max-height: 680px; object-fit: contain;"></div></div>
+      </div>
+      <div class="item">
+        <div class="image-body"><div align=center><img class="supplementary-img" src="static/images/屏幕截图 2026-02-15 174722.png" alt="Screenshot" style="width: 100%; max-height: 680px; object-fit: contain;"></div></div>
+      </div>
+      <div class="item">
+        <div class="image-body"><div align=center><img class="supplementary-img" src="static/images/屏幕截图 2026-02-15 174706.png" alt="Screenshot" style="width: 100%; max-height: 680px; object-fit: contain;"></div></div>
+      </div>
+      <div class="item">
+        <div class="image-body"><div align=center><img class="supplementary-img" src="static/images/屏幕截图 2026-02-15 174655.png" alt="Screenshot" style="width: 100%; max-height: 680px; object-fit: contain;"></div></div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Supplementary -->
+
+
+
+<!-- Paper poster -->
+<!--<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>-->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>[BibTeX placeholder]</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <div class="lightbox-backdrop"></div>
+    <img id="lightbox-img" alt="Zoomed screenshot">
+  </div>
+
+
+  <script id="lightboxScript">
+    (function() {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      if (!lightbox || !lightboxImg) return;
+
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('open');
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightboxImg.src = '';
+      }
+
+      document.querySelectorAll('.supplementary-img').forEach(function(img) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function() {
+          openLightbox(img.src);
+        });
+      });
+
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox || e.target.classList.contains('lightbox-backdrop')) {
+          closeLightbox();
+        }
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+
+</body>
+  </html>
