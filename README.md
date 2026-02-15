@@ -10,7 +10,7 @@
   <a href="<HF_PAPER_URL>">🤗 Paper</a> |
   <a href="<DATASET_URL>"> 🤗 Dataset</a> |
   <a href="<MODEL_URL>"> 🤗 Model</a> |
-  <a href="<PROJECT_URL>"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/solid/globe.svg" height="16" style="vertical-align: middle; margin-right: 6px;">Website</a> |
+  <a href="https://agentic-environmental-engineering.github.io/GymVerse/"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/solid/globe.svg" height="16" style="vertical-align: middle; margin-right: 6px;">Website</a> |
   <a href="https://www.python.org/downloads/release/python-312/"><img src="https://cdn.simpleicons.org/python" height="16" style="vertical-align: middle; margin-right: 6px;">Python 3.10+</a>
 </p>
 
