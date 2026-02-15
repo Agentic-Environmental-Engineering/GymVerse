@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="fig/gymverse.png" width="60px" style="vertical-align: middle; margin-right: 10px;">
+  <img src="fig/gymlogo.png" width="60px" style="vertical-align: middle; margin-right: 10px;">
   GymVerse: How Far Are We from Fully Automated Environment Scaling for Self-Evolving Agents?
 </h1>
 
